@@ -1,19 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABCiências</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABCiências</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f8fc;
+      color: #1f2937;
+    }
+
+    header {
+      background: #0f4c81;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 90px 8%;
+      background: linear-gradient(135deg, #0f4c81, #1d9bf0);
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 46px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 750px;
+      margin: 0 auto 30px;
+    }
+
+    .botao {
+      display: inline-block;
+      background: #f97316;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 8%;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+  </style>
 </head>
 <body>
 
+  <header>
     <h1>ABCiências</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-    <h2>Mostra de Ciências da Educação Básica</h2>
+  <main>
+    <section class="hero">
+      <h2>A ciência começa com uma pergunta</h2>
+      <p>
+        A ABCiências é uma Mostra de Ciências da Educação Básica voltada à valorização
+        da investigação, da criatividade e do protagonismo estudantil.
+      </p>
+      <a class="botao" href="#">Inscrições em breve</a>
+    </section>
 
-    <p>Bem-vindo ao site oficial da ABCiências.</p>
+    <section id="sobre">
+      <h2>Sobre a ABCiências</h2>
+      <p>
+        A ABCiências nasce como um espaço de socialização, divulgação e valorização
+        de projetos científicos desenvolvidos por estudantes da Educação Básica.
+      </p>
+    </section>
 
-    <p>Estamos preparando uma experiência incrível.</p>
+    <section id="categorias">
+      <h2>Categorias</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Pequenos Curiosos</h3>
+          <p>Projetos dos anos iniciais do Ensino Fundamental.</p>
+        </div>
+        <div class="card">
+          <h3>Jovens Investigadores</h3>
+          <p>Projetos dos anos finais do Ensino Fundamental.</p>
+        </div>
+        <div class="card">
+          <h3>Exploradores do Saber</h3>
+          <p>Projetos do Ensino Médio.</p>
+        </div>
+        <div class="card">
+          <h3>Saberes da Vida e da Ciência</h3>
+          <p>Projetos da Educação de Jovens e Adultos.</p>
+        </div>
+        <div class="card">
+          <h3>Saberes sem Fronteiras</h3>
+          <p>Categoria destinada aos estudantes público-alvo da Educação Especial.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Próxima edição</h2>
+      <p>
+        A próxima edição da ABCiências acontecerá em 2026. Em breve serão divulgados
+        o edital, o cronograma e o período de inscrições.
+      </p>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>E-mail: abciencias2025@gmail.com</p>
+      <p>Site oficial: abciencias.com.br</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ABCiências — Mostra de Ciências da Educação Básica</p>
+  </footer>
 
 </body>
 </html>

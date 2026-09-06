@@ -27,19 +27,23 @@
 
     <style>
 
+        body {
+            background: #f4f7fb;
+        }
+
         .pagina-inscricao {
-            padding: 70px 20px 90px;
+            padding: 60px 20px 90px;
         }
 
         .inscricao-cabecalho {
             max-width: 900px;
-            margin: 0 auto 40px;
+            margin: 0 auto 35px;
             text-align: center;
         }
 
         .inscricao-cabecalho h1 {
             margin-bottom: 15px;
-            font-size: clamp(2rem, 5vw, 3.4rem);
+            font-size: clamp(2rem, 5vw, 3.2rem);
         }
 
         .inscricao-cabecalho p {
@@ -52,26 +56,25 @@
             margin: 0 auto;
         }
 
-        .aviso-inscricao {
-            background: #eef6ff;
-            border-left: 5px solid #2563eb;
-            padding: 22px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            line-height: 1.7;
-        }
-
-        .bloco-inscricao {
+        .aviso-inscricao,
+        .bloco-inscricao,
+        .formulario-inscricao {
             background: #ffffff;
-            padding: 30px;
             border-radius: 18px;
-            margin-bottom: 30px;
             box-shadow: 0 8px 30px rgba(0,0,0,.08);
         }
 
-        .bloco-inscricao h2 {
-            margin-top: 0;
-            margin-bottom: 15px;
+        .aviso-inscricao {
+            padding: 22px;
+            border-left: 5px solid #2563eb;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            background: #eef6ff;
+        }
+
+        .bloco-inscricao {
+            padding: 30px;
+            margin-bottom: 30px;
         }
 
         .pix-dados {
@@ -95,7 +98,7 @@
             cursor: pointer;
             font-weight: 700;
             background: #0f766e;
-            color: white;
+            color: #ffffff;
         }
 
         .taxa-box {
@@ -112,13 +115,17 @@
         }
 
         .formulario-inscricao {
-            background: #ffffff;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            transform: none !important;
             padding: 35px;
-            border-radius: 18px;
-            box-shadow: 0 8px 30px rgba(0,0,0,.08);
         }
 
         .grupo-formulario {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
             margin-top: 35px;
             padding-top: 25px;
             border-top: 1px solid #e5e7eb;
@@ -131,6 +138,7 @@
         }
 
         .campo {
+            display: block;
             margin-bottom: 20px;
         }
 
@@ -143,6 +151,7 @@
         .campo input,
         .campo select,
         .campo textarea {
+            display: block;
             width: 100%;
             padding: 13px;
             border: 1px solid #cbd5e1;
@@ -150,6 +159,8 @@
             font-family: inherit;
             font-size: 1rem;
             box-sizing: border-box;
+            background: #ffffff;
+            color: #111827;
         }
 
         .campo textarea {
@@ -163,14 +174,16 @@
             gap: 20px;
         }
 
-        .participante-box {
+        .participante-box,
+        .termo-box {
             background: #f8fafc;
             padding: 18px;
             border-radius: 12px;
             margin-bottom: 15px;
         }
 
-        .participante-box > strong {
+        .participante-box > strong,
+        .termo-box > strong {
             display: block;
             margin-bottom: 15px;
         }
@@ -180,6 +193,30 @@
             font-size: .92rem;
             color: #475569;
             line-height: 1.5;
+        }
+
+        .documento-box {
+            background: #eef6ff;
+            border-left: 5px solid #2563eb;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .limite-arquivos {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .resumo-pagamento {
+            background: #fff7ed;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
         }
 
         .aceite {
@@ -200,52 +237,6 @@
             margin-top: 5px;
         }
 
-        .resumo-pagamento {
-            background: #fff7ed;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        .documento-box {
-            background: #eef6ff;
-            border-left: 5px solid #2563eb;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-        }
-
-        .documento-box p {
-            margin-top: 10px;
-            line-height: 1.6;
-        }
-
-        .limite-arquivos {
-            background: #fff7ed;
-            border-left: 5px solid #f97316;
-            padding: 18px;
-            border-radius: 12px;
-            margin: 20px 0;
-            line-height: 1.6;
-        }
-
-        .termo-box {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            padding: 18px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-        }
-
-        .termo-box strong {
-            display: block;
-            margin-bottom: 12px;
-        }
-
-        .termo-inativo {
-            opacity: .55;
-        }
-
         .botao-enviar {
             width: 100%;
             padding: 17px;
@@ -258,20 +249,13 @@
             color: #ffffff;
         }
 
-        .botao-enviar:hover {
-            transform: translateY(-2px);
-        }
-
         @media(max-width: 700px) {
 
             .linha-formulario {
                 grid-template-columns: 1fr;
             }
 
-            .formulario-inscricao {
-                padding: 22px;
-            }
-
+            .formulario-inscricao,
             .bloco-inscricao {
                 padding: 22px;
             }
@@ -310,7 +294,6 @@
         </button>
 
         <nav class="menu">
-
             <a href="../index.html">Início</a>
             <a href="sobre.html">Sobre</a>
             <a href="edicoes.html">Edições</a>
@@ -324,7 +307,6 @@
                href="avaliadores.html">
                 Área do Avaliador
             </a>
-
         </nav>
 
     </div>
@@ -334,8 +316,7 @@
 
 <main class="pagina-inscricao">
 
-
-    <div class="inscricao-cabecalho revelar">
+    <div class="inscricao-cabecalho">
 
         <span class="subtitulo">
             II ABCiências
@@ -350,7 +331,7 @@
             <strong>II Mostra ABCCEL de Ciências — ABCiências</strong>,
             que será realizada em
             <strong>30 de outubro de 2026</strong>,
-            no município de Bela Cruz – CE.
+            em Bela Cruz – CE.
         </p>
 
     </div>
@@ -359,7 +340,7 @@
     <div class="inscricao-conteudo">
 
 
-        <div class="aviso-inscricao revelar">
+        <div class="aviso-inscricao">
 
             <strong>📅 Período de inscrições:</strong>
             27 de agosto a 02 de outubro de 2026.
@@ -376,7 +357,7 @@
         </div>
 
 
-        <section class="bloco-inscricao revelar">
+        <section class="bloco-inscricao">
 
             <span class="subtitulo">
                 Pagamento
@@ -387,26 +368,19 @@
             </h2>
 
             <p>
-                Será cobrada uma taxa de
-                <strong>R$ 5,00 por participante</strong>.
-                São considerados participantes todos os estudantes,
-                o professor orientador e o professor coorientador,
-                quando houver.
+                A taxa é de
+                <strong>R$ 5,00 por participante</strong>,
+                incluindo estudantes, professor orientador
+                e professor coorientador, quando houver.
             </p>
-
 
             <div class="pix-dados">
 
-                <p>
-                    <strong>Pagamento via PIX</strong>
-                </p>
+                <p><strong>Pagamento via PIX</strong></p>
 
-                <p>
-                    <strong>Chave PIX:</strong>
-                </p>
+                <p><strong>Chave PIX:</strong></p>
 
-                <div class="pix-chave"
-                     id="chavePix">
+                <div class="pix-chave" id="chavePix">
                     88997141461
                 </div>
 
@@ -431,8 +405,7 @@
                 </strong>
 
                 <p>
-                    O valor será calculado de acordo com
-                    o número de participantes preenchidos no formulário.
+                    O valor será atualizado conforme os participantes preenchidos.
                 </p>
 
                 <p>
@@ -442,9 +415,7 @@
 
                 <div class="taxa-total">
                     Total:
-                    <span id="valorTotal">
-                        R$ 0,00
-                    </span>
+                    <span id="valorTotal">R$ 0,00</span>
                 </div>
 
             </div>
@@ -452,16 +423,13 @@
         </section>
 
 
-
         <form
-    class="formulario-inscricao"
-    action="https://formsubmit.co/abciencias2025@gmail.com"
-    method="POST"
-    enctype="multipart/form-data"
-    id="formInscricao">
+            class="formulario-inscricao"
+            action="https://formsubmit.co/abciencias2025@gmail.com"
+            method="POST"
+            enctype="multipart/form-data"
+            id="formInscricao">
 
-
-            <!-- CONFIGURAÇÕES DO FORMSUBMIT -->
 
             <input type="hidden"
                    name="_subject"
@@ -488,146 +456,80 @@
                 Formulário de inscrição
             </h2>
 
-            <p>
-                Preencha atentamente todos os campos.
-                As informações serão utilizadas pela Comissão
-                Organizadora para análise e identificação do projeto.
-            </p>
-
-
-
-            <!-- 1. ESCOLA -->
 
             <div class="grupo-formulario">
 
-                <h3>
-                    1. Dados da escola
-                </h3>
-
+                <h3>1. Dados da escola</h3>
 
                 <div class="campo">
-
-                    <label for="escola">
-                        Nome da escola *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="escola"
-                        name="Escola"
-                        required>
-
+                    <label for="escola">Nome da escola *</label>
+                    <input type="text"
+                           id="escola"
+                           name="Escola"
+                           required>
                 </div>
-
 
                 <div class="linha-formulario">
 
-
                     <div class="campo">
+                        <label for="rede">Rede de ensino *</label>
 
-                        <label for="rede">
-                            Rede de ensino *
-                        </label>
+                        <select id="rede"
+                                name="Rede_de_ensino"
+                                required>
 
-                        <select
-                            id="rede"
-                            name="Rede_de_ensino"
-                            required>
-
-                            <option value="">
-                                Selecione
-                            </option>
-
-                            <option value="Municipal">
-                                Municipal
-                            </option>
-
-                            <option value="Estadual">
-                                Estadual
-                            </option>
-
-                            <option value="Privada">
-                                Privada
-                            </option>
+                            <option value="">Selecione</option>
+                            <option value="Municipal">Municipal</option>
+                            <option value="Estadual">Estadual</option>
+                            <option value="Privada">Privada</option>
 
                         </select>
-
                     </div>
 
-
                     <div class="campo">
+                        <label for="municipio">Município *</label>
 
-                        <label for="municipio">
-                            Município *
-                        </label>
-
-                        <input
-                            type="text"
-                            id="municipio"
-                            name="Municipio"
-                            required>
-
+                        <input type="text"
+                               id="municipio"
+                               name="Municipio"
+                               required>
                     </div>
 
                 </div>
 
-
                 <div class="campo">
+                    <label for="emailEscola">E-mail da escola</label>
 
-                    <label for="emailEscola">
-                        E-mail da escola
-                    </label>
-
-                    <input
-                        type="email"
-                        id="emailEscola"
-                        name="Email_da_escola">
-
+                    <input type="email"
+                           id="emailEscola"
+                           name="Email_da_escola">
                 </div>
 
             </div>
 
 
-
-            <!-- 2. PROJETO -->
-
             <div class="grupo-formulario">
 
-                <h3>
-                    2. Dados do projeto
-                </h3>
-
+                <h3>2. Dados do projeto</h3>
 
                 <div class="campo">
+                    <label for="titulo">Título do projeto *</label>
 
-                    <label for="titulo">
-                        Título do projeto *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="titulo"
-                        name="Titulo_do_projeto"
-                        required>
-
+                    <input type="text"
+                           id="titulo"
+                           name="Titulo_do_projeto"
+                           required>
                 </div>
 
-
                 <div class="campo">
 
-                    <label for="categoria">
-                        Categoria *
-                    </label>
+                    <label for="categoria">Categoria *</label>
 
-                    <select
-                        id="categoria"
-                        name="Categoria"
-                        required
-                        onchange="verificarCategoria()">
+                    <select id="categoria"
+                            name="Categoria"
+                            required>
 
-                        <option value="">
-                            Selecione
-                        </option>
+                        <option value="">Selecione</option>
 
                         <option value="Pequenos Curiosos">
                             Pequenos Curiosos — Anos Iniciais
@@ -654,20 +556,16 @@
                 </div>
 
 
-                <div class="campo"
-                     id="campoArea">
+                <div class="campo">
 
                     <label for="area">
-                        Área do conhecimento *
+                        Área do conhecimento
                     </label>
 
-                    <select
-                        id="area"
-                        name="Area_do_conhecimento">
+                    <select id="area"
+                            name="Area_do_conhecimento">
 
-                        <option value="">
-                            Selecione
-                        </option>
+                        <option value="">Selecione</option>
 
                         <option value="Linguagens, Códigos e suas Tecnologias">
                             Linguagens, Códigos e suas Tecnologias
@@ -690,36 +588,31 @@
                 </div>
 
 
-                <div class="campo"
-                     id="campoAee"
-                     style="display:none;">
+                <div class="campo">
 
                     <label for="nivelAee">
-                        Nível/modalidade do estudante no AEE *
+                        Nível/modalidade AEE
                     </label>
 
-                    <select
-                        id="nivelAee"
-                        name="Nivel_modalidade_AEE">
+                    <select id="nivelAee"
+                            name="Nivel_modalidade_AEE">
 
-                        <option value="">
-                            Selecione
+                        <option value="">Não se aplica / Selecione</option>
+
+                        <option value="AEE - Anos Iniciais">
+                            AEE — Anos Iniciais
                         </option>
 
-                        <option value="AEE - Anos Iniciais do Ensino Fundamental">
-                            AEE — Anos Iniciais do Ensino Fundamental
-                        </option>
-
-                        <option value="AEE - Anos Finais do Ensino Fundamental">
-                            AEE — Anos Finais do Ensino Fundamental
+                        <option value="AEE - Anos Finais">
+                            AEE — Anos Finais
                         </option>
 
                         <option value="AEE - Ensino Médio">
                             AEE — Ensino Médio
                         </option>
 
-                        <option value="AEE - Educação de Jovens e Adultos">
-                            AEE — Educação de Jovens e Adultos (EJA)
+                        <option value="AEE - EJA">
+                            AEE — EJA
                         </option>
 
                     </select>
@@ -728,268 +621,145 @@
 
 
                 <div class="campo">
+                    <label for="resumo">Resumo do projeto *</label>
 
-                    <label for="resumo">
-                        Resumo do projeto *
-                    </label>
-
-                    <textarea
-                        id="resumo"
-                        name="Resumo_do_projeto"
-                        required
-                        placeholder="Apresente de forma clara a proposta do projeto."></textarea>
-
+                    <textarea id="resumo"
+                              name="Resumo_do_projeto"
+                              required></textarea>
                 </div>
 
 
                 <div class="campo">
+                    <label for="objetivos">Objetivos do projeto *</label>
 
-                    <label for="objetivos">
-                        Objetivos do projeto *
+                    <textarea id="objetivos"
+                              name="Objetivos_do_projeto"
+                              required></textarea>
+                </div>
+
+            </div>
+
+
+            <div class="grupo-formulario">
+
+                <h3>3. Estudantes</h3>
+
+                <div class="campo">
+                    <label for="estudante1">Estudante 1 *</label>
+
+                    <input type="text"
+                           id="estudante1"
+                           name="Estudante_1"
+                           class="participante"
+                           required>
+                </div>
+
+                <div class="campo">
+                    <label for="estudante2">Estudante 2</label>
+
+                    <input type="text"
+                           id="estudante2"
+                           name="Estudante_2"
+                           class="participante">
+                </div>
+
+                <div class="campo">
+                    <label for="estudante3">Estudante 3</label>
+
+                    <input type="text"
+                           id="estudante3"
+                           name="Estudante_3"
+                           class="participante">
+                </div>
+
+                <div class="campo">
+                    <label for="estudante4">Estudante 4</label>
+
+                    <input type="text"
+                           id="estudante4"
+                           name="Estudante_4"
+                           class="participante">
+                </div>
+
+            </div>
+
+
+            <div class="grupo-formulario">
+
+                <h3>4. Professores</h3>
+
+                <div class="campo">
+                    <label for="orientador">
+                        Professor orientador *
                     </label>
 
-                    <textarea
-                        id="objetivos"
-                        name="Objetivos_do_projeto"
-                        required
-                        placeholder="Informe os principais objetivos do projeto."></textarea>
-
+                    <input type="text"
+                           id="orientador"
+                           name="Professor_orientador"
+                           class="participante"
+                           required>
                 </div>
 
-            </div>
+                <div class="campo">
+                    <label>
+                        E-mail do orientador *
+                    </label>
 
-
-
-            <!-- 3. ESTUDANTES -->
-
-            <div class="grupo-formulario">
-
-                <h3>
-                    3. Estudantes
-                </h3>
-
-                <p>
-                    Cada projeto poderá ter até quatro estudantes.
-                </p>
-
-
-                <div class="participante-box">
-
-                    <strong>Estudante 1</strong>
-
-                    <div class="campo">
-
-                        <label for="estudante1">
-                            Nome completo *
-                        </label>
-
-                        <input
-                            type="text"
-                            id="estudante1"
-                            name="Estudante_1"
-                            class="participante"
-                            required>
-
-                    </div>
-
+                    <input type="email"
+                           name="Email_orientador"
+                           required>
                 </div>
 
+                <div class="campo">
+                    <label>
+                        Telefone / WhatsApp *
+                    </label>
 
-                <div class="participante-box">
-
-                    <strong>Estudante 2</strong>
-
-                    <div class="campo">
-
-                        <label for="estudante2">
-                            Nome completo
-                        </label>
-
-                        <input
-                            type="text"
-                            id="estudante2"
-                            name="Estudante_2"
-                            class="participante">
-
-                    </div>
-
+                    <input type="tel"
+                           name="Telefone_orientador"
+                           required>
                 </div>
 
-
-                <div class="participante-box">
-
-                    <strong>Estudante 3</strong>
-
-                    <div class="campo">
-
-                        <label for="estudante3">
-                            Nome completo
-                        </label>
-
-                        <input
-                            type="text"
-                            id="estudante3"
-                            name="Estudante_3"
-                            class="participante">
-
-                    </div>
-
-                </div>
-
-
-                <div class="participante-box">
-
-                    <strong>Estudante 4</strong>
-
-                    <div class="campo">
-
-                        <label for="estudante4">
-                            Nome completo
-                        </label>
-
-                        <input
-                            type="text"
-                            id="estudante4"
-                            name="Estudante_4"
-                            class="participante">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- 4. PROFESSORES -->
-
-            <div class="grupo-formulario">
-
-                <h3>
-                    4. Professores
-                </h3>
-
-
-                <div class="participante-box">
-
-                    <strong>
-                        Professor orientador
-                    </strong>
-
-
-                    <div class="campo">
-
-                        <label for="orientador">
-                            Nome completo *
-                        </label>
-
-                        <input
-                            type="text"
-                            id="orientador"
-                            name="Professor_orientador"
-                            class="participante"
-                            required>
-
-                    </div>
-
-
-                    <div class="campo">
-
-                        <label>
-                            E-mail do orientador *
-                        </label>
-
-                        <input
-                            type="email"
-                            name="Email_orientador"
-                            required>
-
-                    </div>
-
-
-                    <div class="campo">
-
-                        <label>
-                            Telefone / WhatsApp *
-                        </label>
-
-                        <input
-                            type="tel"
-                            name="Telefone_orientador"
-                            required>
-
-                    </div>
-
-                </div>
-
-
-                <div class="participante-box">
-
-                    <strong>
+                <div class="campo">
+                    <label for="coorientador">
                         Professor coorientador
-                    </strong>
+                    </label>
 
+                    <input type="text"
+                           id="coorientador"
+                           name="Professor_coorientador"
+                           class="participante">
+                </div>
 
-                    <div class="campo">
+                <div class="campo">
+                    <label>
+                        E-mail do coorientador
+                    </label>
 
-                        <label for="coorientador">
-                            Nome completo
-                        </label>
-
-                        <input
-                            type="text"
-                            id="coorientador"
-                            name="Professor_coorientador"
-                            class="participante">
-
-                    </div>
-
-
-                    <div class="campo">
-
-                        <label>
-                            E-mail
-                        </label>
-
-                        <input
-                            type="email"
-                            name="Email_coorientador">
-
-                    </div>
-
+                    <input type="email"
+                           name="Email_coorientador">
                 </div>
 
             </div>
 
 
-
-            <!-- 5. PAGAMENTO -->
-
             <div class="grupo-formulario">
 
-                <h3>
-                    5. Pagamento
-                </h3>
-
+                <h3>5. Pagamento</h3>
 
                 <div class="resumo-pagamento">
 
                     <p>
                         Número de participantes:
-                        <strong id="resumoParticipantes">
-                            0
-                        </strong>
+                        <strong id="resumoParticipantes">0</strong>
                     </p>
 
                     <p>
                         Valor da inscrição:
-                        <strong id="resumoValor">
-                            R$ 0,00
-                        </strong>
+                        <strong id="resumoValor">R$ 0,00</strong>
                     </p>
 
                 </div>
-
 
                 <div class="campo">
 
@@ -997,58 +767,36 @@
                         Comprovante de pagamento PIX *
                     </label>
 
-                    <input
-                        type="file"
-                        id="comprovante"
-                        name="Comprovante_PIX"
-                        accept=".pdf,.jpg,.jpeg,.png"
-                        required>
-
-                    <p class="observacao">
-                        Formatos aceitos: PDF, JPG, JPEG ou PNG.
-                    </p>
+                    <input type="file"
+                           id="comprovante"
+                           name="Comprovante_PIX"
+                           accept=".pdf,.jpg,.jpeg,.png"
+                           required>
 
                 </div>
 
             </div>
 
 
-
-            <!-- 6. DOCUMENTAÇÃO -->
-
             <div class="grupo-formulario">
 
-                <h3>
-                    6. Termos de Autorização de Uso de Imagem e Voz
-                </h3>
-
+                <h3>6. Termos de autorização</h3>
 
                 <div class="documento-box">
 
                     <strong>
-                        📄 Modelo oficial do termo
+                        📄 Termo de Autorização de Uso de Imagem e Voz
                     </strong>
 
                     <p>
-                        Cada participante da equipe deverá possuir
-                        seu próprio termo de autorização.
+                        Baixe o modelo, preencha e assine um termo por participante.
                     </p>
 
-                    <p>
-                        Para menores de 18 anos,
-                        o termo deverá ser assinado pelo responsável legal.
-                        Participantes maiores de 18 anos
-                        poderão assinar o próprio documento.
-                    </p>
-
-                    <a
-                        class="botao botao--azul"
-                        href="../documentos/termo_autorizacao_imagem_voz_abciencias_2026.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer">
-
-                        Baixar modelo do Termo de Autorização
-
+                    <a class="botao botao--azul"
+                       href="../documentos/termo_autorizacao_imagem_voz_abciencias_2026.pdf"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Baixar modelo do Termo
                     </a>
 
                 </div>
@@ -1056,198 +804,100 @@
 
                 <div class="limite-arquivos">
 
-                    <strong>⚠️ Atenção ao tamanho dos arquivos</strong>
+                    <strong>
+                        ⚠️ Limite total de arquivos: 10 MB
+                    </strong>
 
                     <br><br>
 
-                    O tamanho total de todos os documentos enviados
-                    neste formulário, incluindo comprovante PIX e termos,
-                    não deve ultrapassar <strong>10 MB</strong>.
-
-                    <br><br>
-
-                    Recomendamos fotografar ou digitalizar os documentos
-                    em boa qualidade, mas evitando arquivos muito grandes.
+                    O comprovante PIX e todos os termos somados
+                    não devem ultrapassar 10 MB.
 
                 </div>
 
-
-
-                <!-- TERMO ESTUDANTE 1 -->
 
                 <div class="termo-box">
-
-                    <strong>
-                        Termo — Estudante 1 *
-                    </strong>
+                    <strong>Termo — Estudante 1 *</strong>
 
                     <div class="campo">
-
-                        <input
-                            type="file"
-                            id="termoEstudante1"
-                            name="Termo_Estudante_1"
-                            accept=".pdf,.jpg,.jpeg,.png"
-                            required>
-
+                        <input type="file"
+                               name="Termo_Estudante_1"
+                               accept=".pdf,.jpg,.jpeg,.png"
+                               required>
                     </div>
-
                 </div>
 
-
-
-                <!-- TERMO ESTUDANTE 2 -->
-
-                <div class="termo-box"
-                     id="boxTermoEstudante2">
-
-                    <strong>
-                        Termo — Estudante 2
-                    </strong>
-
-                    <div class="campo">
-
-                        <input
-                            type="file"
-                            id="termoEstudante2"
-                            name="Termo_Estudante_2"
-                            accept=".pdf,.jpg,.jpeg,.png">
-
-                    </div>
-
-                    <p class="observacao">
-                        Obrigatório somente se houver Estudante 2.
-                    </p>
-
-                </div>
-
-
-
-                <!-- TERMO ESTUDANTE 3 -->
-
-                <div class="termo-box"
-                     id="boxTermoEstudante3">
-
-                    <strong>
-                        Termo — Estudante 3
-                    </strong>
-
-                    <div class="campo">
-
-                        <input
-                            type="file"
-                            id="termoEstudante3"
-                            name="Termo_Estudante_3"
-                            accept=".pdf,.jpg,.jpeg,.png">
-
-                    </div>
-
-                    <p class="observacao">
-                        Obrigatório somente se houver Estudante 3.
-                    </p>
-
-                </div>
-
-
-
-                <!-- TERMO ESTUDANTE 4 -->
-
-                <div class="termo-box"
-                     id="boxTermoEstudante4">
-
-                    <strong>
-                        Termo — Estudante 4
-                    </strong>
-
-                    <div class="campo">
-
-                        <input
-                            type="file"
-                            id="termoEstudante4"
-                            name="Termo_Estudante_4"
-                            accept=".pdf,.jpg,.jpeg,.png">
-
-                    </div>
-
-                    <p class="observacao">
-                        Obrigatório somente se houver Estudante 4.
-                    </p>
-
-                </div>
-
-
-
-                <!-- TERMO ORIENTADOR -->
 
                 <div class="termo-box">
-
-                    <strong>
-                        Termo — Professor orientador *
-                    </strong>
+                    <strong>Termo — Estudante 2</strong>
 
                     <div class="campo">
-
-                        <input
-                            type="file"
-                            id="termoOrientador"
-                            name="Termo_Professor_Orientador"
-                            accept=".pdf,.jpg,.jpeg,.png"
-                            required>
-
+                        <input type="file"
+                               name="Termo_Estudante_2"
+                               accept=".pdf,.jpg,.jpeg,.png">
                     </div>
-
                 </div>
 
 
-
-                <!-- TERMO COORIENTADOR -->
-
-                <div class="termo-box"
-                     id="boxTermoCoorientador">
-
-                    <strong>
-                        Termo — Professor coorientador
-                    </strong>
+                <div class="termo-box">
+                    <strong>Termo — Estudante 3</strong>
 
                     <div class="campo">
-
-                        <input
-                            type="file"
-                            id="termoCoorientador"
-                            name="Termo_Professor_Coorientador"
-                            accept=".pdf,.jpg,.jpeg,.png">
-
+                        <input type="file"
+                               name="Termo_Estudante_3"
+                               accept=".pdf,.jpg,.jpeg,.png">
                     </div>
-
-                    <p class="observacao">
-                        Obrigatório somente se houver professor coorientador.
-                    </p>
-
                 </div>
 
+
+                <div class="termo-box">
+                    <strong>Termo — Estudante 4</strong>
+
+                    <div class="campo">
+                        <input type="file"
+                               name="Termo_Estudante_4"
+                               accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+                </div>
+
+
+                <div class="termo-box">
+                    <strong>Termo — Professor orientador *</strong>
+
+                    <div class="campo">
+                        <input type="file"
+                               name="Termo_Professor_Orientador"
+                               accept=".pdf,.jpg,.jpeg,.png"
+                               required>
+                    </div>
+                </div>
+
+
+                <div class="termo-box">
+                    <strong>Termo — Professor coorientador</strong>
+
+                    <div class="campo">
+                        <input type="file"
+                               name="Termo_Professor_Coorientador"
+                               accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+                </div>
 
             </div>
 
 
-
-            <!-- 7. CONFIRMAÇÃO -->
-
             <div class="grupo-formulario">
 
-                <h3>
-                    7. Confirmação
-                </h3>
-
+                <h3>7. Confirmação</h3>
 
                 <div class="aceite">
 
                     <label>
 
-                        <input
-                            type="checkbox"
-                            name="Confirmacao_dados"
-                            value="Sim"
-                            required>
+                        <input type="checkbox"
+                               name="Confirmacao_dados"
+                               value="Sim"
+                               required>
 
                         <span>
                             Declaro que as informações apresentadas
@@ -1263,16 +913,14 @@
 
                     <label>
 
-                        <input
-                            type="checkbox"
-                            name="Confirmacao_edital"
-                            value="Sim"
-                            required>
+                        <input type="checkbox"
+                               name="Confirmacao_edital"
+                               value="Sim"
+                               required>
 
                         <span>
                             Declaro que li e estou de acordo
-                            com as normas e condições
-                            estabelecidas no Edital 01/2026.
+                            com o Edital 01/2026.
                         </span>
 
                     </label>
@@ -1280,77 +928,42 @@
                 </div>
 
 
-                <button
-                    type="submit"
-                    class="botao-enviar">
-
+                <button type="submit"
+                        class="botao-enviar">
                     Enviar inscrição do projeto
-
                 </button>
 
             </div>
 
-
         </form>
-
 
     </div>
 
 </main>
 
 
-
 <footer class="rodape">
 
     <div class="container rodape__grid">
 
-
         <div>
-
-            <strong>
-                Portal ABCiências
-            </strong>
+            <strong>Portal ABCiências</strong>
 
             <p>
                 Mostra ABCCEL de Ciências da Educação Básica.
-                Um espaço para investigar, criar,
-                apresentar e valorizar a ciência
-                feita por estudantes.
             </p>
-
         </div>
 
-
         <div>
+            <strong>Links rápidos</strong>
 
-            <strong>
-                Links rápidos
-            </strong>
-
-            <a href="edital.html">
-                Edital 2026
-            </a>
-
-            <a href="inscricoes.html">
-                Inscrições
-            </a>
-
-            <a href="edicao-2025.html">
-                Edição 2025
-            </a>
-
-            <a href="galeria.html">
-                Galeria
-            </a>
-
+            <a href="edital.html">Edital 2026</a>
+            <a href="inscricoes.html">Inscrições</a>
+            <a href="galeria.html">Galeria</a>
         </div>
 
-
         <div>
-
-            <strong>
-                Contato
-            </strong>
+            <strong>Contato</strong>
 
             <a href="mailto:abciencias2025@gmail.com">
                 abciencias2025@gmail.com
@@ -1359,46 +972,20 @@
             <a href="contato.html">
                 Fale com a comissão
             </a>
-
-            <a href="https://www.instagram.com/abci.encias?igsh=MWxobHc5eThuZXZkYg=="
-               target="_blank"
-               rel="noopener noreferrer">
-
-                📷 @abci.encias
-
-            </a>
-
         </div>
-
-    </div>
-
-
-    <div class="rodape__base">
-
-        © 2026 ABCiências —
-        Academia Belacruzense de Cultura,
-        Ciências, Estudos e Letras.
 
     </div>
 
 </footer>
 
 
-
 <script src="../js/script.js"></script>
-
 
 <script>
 
-
-/* ==================================================
-   COPIAR PIX
-================================================== */
-
 function copiarPix() {
 
-    const chave =
-        document.getElementById("chavePix").innerText;
+    const chave = document.getElementById("chavePix").innerText;
 
     navigator.clipboard.writeText(chave);
 
@@ -1407,11 +994,6 @@ function copiarPix() {
 }
 
 
-
-/* ==================================================
-   CÁLCULO AUTOMÁTICO DA TAXA
-================================================== */
-
 const participantes =
     document.querySelectorAll(".participante");
 
@@ -1419,7 +1001,6 @@ const participantes =
 function calcularTaxa() {
 
     let quantidade = 0;
-
 
     participantes.forEach(function(campo) {
 
@@ -1443,42 +1024,27 @@ function calcularTaxa() {
         );
 
 
-    document.getElementById(
-        "quantidadeParticipantes"
-    ).textContent = quantidade;
+    document.getElementById("quantidadeParticipantes").textContent =
+        quantidade;
 
-
-    document.getElementById(
-        "valorTotal"
-    ).textContent = valorFormatado;
-
-
-    document.getElementById(
-        "resumoParticipantes"
-    ).textContent = quantidade;
-
-
-    document.getElementById(
-        "resumoValor"
-    ).textContent = valorFormatado;
-
-
-    document.getElementById(
-        "valorTotalFormulario"
-    ).value =
-        quantidade +
-        " participante(s) - " +
+    document.getElementById("valorTotal").textContent =
         valorFormatado;
+
+    document.getElementById("resumoParticipantes").textContent =
+        quantidade;
+
+    document.getElementById("resumoValor").textContent =
+        valorFormatado;
+
+    document.getElementById("valorTotalFormulario").value =
+        quantidade + " participante(s) - " + valorFormatado;
 
 }
 
 
 participantes.forEach(function(campo) {
 
-    campo.addEventListener(
-        "input",
-        calcularTaxa
-    );
+    campo.addEventListener("input", calcularTaxa);
 
 });
 
@@ -1486,243 +1052,52 @@ participantes.forEach(function(campo) {
 calcularTaxa();
 
 
+document.getElementById("formInscricao")
+.addEventListener("submit", function(event) {
 
-/* ==================================================
-   CATEGORIA / AEE / ÁREA DO CONHECIMENTO
-================================================== */
+    const arquivos =
+        document.querySelectorAll('input[type="file"]');
 
-function verificarCategoria() {
+    let tamanhoTotal = 0;
 
-    const categoria =
-        document.getElementById("categoria").value;
 
-    const campoArea =
-        document.getElementById("campoArea");
+    arquivos.forEach(function(input) {
 
-    const area =
-        document.getElementById("area");
+        if (input.files) {
 
-    const campoAee =
-        document.getElementById("campoAee");
+            for (let i = 0; i < input.files.length; i++) {
 
-    const nivelAee =
-        document.getElementById("nivelAee");
-
-
-    if (
-        categoria === "Jovens Investigadores" ||
-        categoria === "Exploradores do Saber"
-    ) {
-
-        campoArea.style.display = "block";
-        area.required = true;
-
-    }
-
-    else {
-
-        campoArea.style.display = "none";
-        area.required = false;
-        area.value = "";
-
-    }
-
-
-    if (
-        categoria === "Saberes sem Fronteiras"
-    ) {
-
-        campoAee.style.display = "block";
-        nivelAee.required = true;
-
-    }
-
-    else {
-
-        campoAee.style.display = "none";
-        nivelAee.required = false;
-        nivelAee.value = "";
-
-    }
-
-}
-
-
-verificarCategoria();
-
-
-
-/* ==================================================
-   TERMOS OPCIONAIS TORNAM-SE OBRIGATÓRIOS
-   QUANDO O PARTICIPANTE É INFORMADO
-================================================== */
-
-function configurarTermo(
-    campoNomeId,
-    campoTermoId,
-    boxId
-) {
-
-    const campoNome =
-        document.getElementById(campoNomeId);
-
-    const campoTermo =
-        document.getElementById(campoTermoId);
-
-    const box =
-        document.getElementById(boxId);
-
-
-    function atualizar() {
-
-        const existeParticipante =
-            campoNome.value.trim() !== "";
-
-
-        campoTermo.required =
-            existeParticipante;
-
-
-        if (existeParticipante) {
-
-            box.classList.remove(
-                "termo-inativo"
-            );
-
-        }
-
-        else {
-
-            box.classList.add(
-                "termo-inativo"
-            );
-
-            campoTermo.value = "";
-
-        }
-
-    }
-
-
-    campoNome.addEventListener(
-        "input",
-        atualizar
-    );
-
-
-    atualizar();
-
-}
-
-
-
-configurarTermo(
-    "estudante2",
-    "termoEstudante2",
-    "boxTermoEstudante2"
-);
-
-
-configurarTermo(
-    "estudante3",
-    "termoEstudante3",
-    "boxTermoEstudante3"
-);
-
-
-configurarTermo(
-    "estudante4",
-    "termoEstudante4",
-    "boxTermoEstudante4"
-);
-
-
-configurarTermo(
-    "coorientador",
-    "termoCoorientador",
-    "boxTermoCoorientador"
-);
-
-
-
-/* ==================================================
-   VERIFICAÇÃO DO LIMITE TOTAL DE 10 MB
-================================================== */
-
-document.getElementById(
-    "formInscricao"
-).addEventListener(
-    "submit",
-    function(event) {
-
-        const arquivos =
-            document.querySelectorAll(
-                'input[type="file"]'
-            );
-
-
-        let tamanhoTotal = 0;
-
-
-        arquivos.forEach(function(input) {
-
-            if (
-                input.files &&
-                input.files.length > 0
-            ) {
-
-                for (
-                    let i = 0;
-                    i < input.files.length;
-                    i++
-                ) {
-
-                    tamanhoTotal +=
-                        input.files[i].size;
-
-                }
+                tamanhoTotal += input.files[i].size;
 
             }
 
-        });
-
-
-        const limite =
-            10 * 1024 * 1024;
-
-
-        if (
-            tamanhoTotal > limite
-        ) {
-
-            event.preventDefault();
-
-
-            const tamanhoMB =
-                (
-                    tamanhoTotal /
-                    1024 /
-                    1024
-                ).toFixed(2);
-
-
-            alert(
-                "Os arquivos selecionados totalizam " +
-                tamanhoMB +
-                " MB.\n\n" +
-                "O limite total é de 10 MB.\n\n" +
-                "Reduza o tamanho das imagens ou PDFs e tente novamente."
-            );
-
         }
 
-    }
-);
+    });
 
+
+    const limite = 10 * 1024 * 1024;
+
+
+    if (tamanhoTotal > limite) {
+
+        event.preventDefault();
+
+        const tamanhoMB =
+            (tamanhoTotal / 1024 / 1024).toFixed(2);
+
+        alert(
+            "Os arquivos totalizam " +
+            tamanhoMB +
+            " MB. O limite é 10 MB."
+        );
+
+    }
+
+});
 
 </script>
 
 
 </body>
-
 </html>

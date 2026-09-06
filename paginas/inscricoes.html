@@ -207,6 +207,19 @@
             margin-bottom: 20px;
         }
 
+        .documento-box {
+            background: #eef6ff;
+            border-left: 5px solid #2563eb;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .documento-box p {
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
         .botao-enviar {
             width: 100%;
             padding: 17px;
@@ -641,7 +654,6 @@
                 </div>
 
 
-
                 <div class="campo"
                      id="campoAee"
                      style="display:none;">
@@ -677,7 +689,6 @@
                     </select>
 
                 </div>
-
 
 
                 <div class="campo">
@@ -875,7 +886,6 @@
                 </div>
 
 
-
                 <div class="participante-box">
 
                     <strong>
@@ -971,22 +981,56 @@
                 </h3>
 
 
+                <div class="documento-box">
+
+                    <strong>
+                        📄 Termo de Autorização de Uso de Imagem e Voz
+                    </strong>
+
+                    <p>
+                        O termo deverá ser preenchido individualmente
+                        para cada participante da equipe.
+                    </p>
+
+                    <p>
+                        Quando o participante for menor de 18 anos,
+                        o documento deverá ser assinado pelo responsável legal.
+                        Quando for maior de 18 anos,
+                        o próprio participante poderá assinar.
+                    </p>
+
+                    <a
+                        class="botao botao--azul"
+                        href="../documentos/termo_autorizacao_imagem_voz_abciencias_2026.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Baixar modelo do Termo de Autorização
+                    </a>
+
+                </div>
+
+
                 <div class="campo">
 
                     <label for="autorizacao">
-                        Termo de autorização de uso de imagem e voz *
+                        Termos de autorização de uso de imagem e voz *
                     </label>
 
                     <input
                         type="file"
                         id="autorizacao"
-                        name="Autorizacao_imagem_voz"
+                        name="Autorizacao_imagem_voz[]"
                         accept=".pdf,.jpg,.jpeg,.png"
+                        multiple
                         required>
 
                     <p class="observacao">
-                        Anexe o termo devidamente assinado,
-                        conforme previsto no edital.
+                        Anexe os termos preenchidos e assinados
+                        de todos os participantes da equipe.
+                        <br><br>
+                        Você pode selecionar vários arquivos de uma só vez.
+                        <br>
+                        Formatos aceitos: PDF, JPG, JPEG ou PNG.
                     </p>
 
                 </div>
@@ -1126,9 +1170,7 @@
             <a href="https://www.instagram.com/abci.encias?igsh=MWxobHc5eThuZXZkYg=="
                target="_blank"
                rel="noopener noreferrer">
-
                 📷 @abci.encias
-
             </a>
 
         </div>
@@ -1153,7 +1195,6 @@
 
 <script>
 
-
 /* ==========================================
    COPIAR CHAVE PIX
 ========================================== */
@@ -1168,7 +1209,6 @@ function copiarPix() {
     alert("Chave PIX copiada: " + chave);
 
 }
-
 
 
 /* ==========================================
@@ -1249,7 +1289,6 @@ participantes.forEach(function(campo) {
 calcularTaxa();
 
 
-
 /* ==========================================
    CAMPOS DINÂMICOS DE CATEGORIA
 ========================================== */
@@ -1272,10 +1311,6 @@ function verificarCategoria() {
         document.getElementById("nivelAee");
 
 
-    /*
-    ÁREA DO CONHECIMENTO
-    */
-
     if (
         categoria === "Jovens Investigadores" ||
         categoria === "Exploradores do Saber"
@@ -1292,10 +1327,6 @@ function verificarCategoria() {
 
     }
 
-
-    /*
-    CATEGORIA AEE
-    */
 
     if (
         categoria === "Saberes sem Fronteiras"
@@ -1316,7 +1347,6 @@ function verificarCategoria() {
 
 
 verificarCategoria();
-
 
 </script>
 

@@ -220,6 +220,32 @@
             line-height: 1.6;
         }
 
+        .limite-arquivos {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .termo-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 18px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .termo-box strong {
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .termo-inativo {
+            opacity: .55;
+        }
+
         .botao-enviar {
             width: 100%;
             padding: 17px;
@@ -253,6 +279,7 @@
         }
 
     </style>
+
 </head>
 
 <body>
@@ -434,6 +461,8 @@
             id="formInscricao">
 
 
+            <!-- CONFIGURAÇÕES DO FORMSUBMIT -->
+
             <input type="hidden"
                    name="_subject"
                    value="Nova inscrição — II ABCiências 2026">
@@ -445,6 +474,10 @@
             <input type="hidden"
                    name="_captcha"
                    value="true">
+
+            <input type="hidden"
+                   name="_url"
+                   value="https://abciencias.com.br/paginas/inscricoes.html">
 
             <input type="hidden"
                    name="Valor_total_inscricao"
@@ -462,6 +495,8 @@
             </p>
 
 
+
+            <!-- 1. ESCOLA -->
 
             <div class="grupo-formulario">
 
@@ -534,7 +569,6 @@
 
                     </div>
 
-
                 </div>
 
 
@@ -554,6 +588,8 @@
             </div>
 
 
+
+            <!-- 2. PROJETO -->
 
             <div class="grupo-formulario">
 
@@ -724,6 +760,8 @@
 
 
 
+            <!-- 3. ESTUDANTES -->
+
             <div class="grupo-formulario">
 
                 <h3>
@@ -737,18 +775,17 @@
 
                 <div class="participante-box">
 
-                    <strong>
-                        Estudante 1
-                    </strong>
+                    <strong>Estudante 1</strong>
 
                     <div class="campo">
 
-                        <label>
+                        <label for="estudante1">
                             Nome completo *
                         </label>
 
                         <input
                             type="text"
+                            id="estudante1"
                             name="Estudante_1"
                             class="participante"
                             required>
@@ -760,18 +797,17 @@
 
                 <div class="participante-box">
 
-                    <strong>
-                        Estudante 2
-                    </strong>
+                    <strong>Estudante 2</strong>
 
                     <div class="campo">
 
-                        <label>
+                        <label for="estudante2">
                             Nome completo
                         </label>
 
                         <input
                             type="text"
+                            id="estudante2"
                             name="Estudante_2"
                             class="participante">
 
@@ -782,18 +818,17 @@
 
                 <div class="participante-box">
 
-                    <strong>
-                        Estudante 3
-                    </strong>
+                    <strong>Estudante 3</strong>
 
                     <div class="campo">
 
-                        <label>
+                        <label for="estudante3">
                             Nome completo
                         </label>
 
                         <input
                             type="text"
+                            id="estudante3"
                             name="Estudante_3"
                             class="participante">
 
@@ -804,18 +839,17 @@
 
                 <div class="participante-box">
 
-                    <strong>
-                        Estudante 4
-                    </strong>
+                    <strong>Estudante 4</strong>
 
                     <div class="campo">
 
-                        <label>
+                        <label for="estudante4">
                             Nome completo
                         </label>
 
                         <input
                             type="text"
+                            id="estudante4"
                             name="Estudante_4"
                             class="participante">
 
@@ -826,6 +860,8 @@
             </div>
 
 
+
+            <!-- 4. PROFESSORES -->
 
             <div class="grupo-formulario">
 
@@ -843,12 +879,13 @@
 
                     <div class="campo">
 
-                        <label>
+                        <label for="orientador">
                             Nome completo *
                         </label>
 
                         <input
                             type="text"
+                            id="orientador"
                             name="Professor_orientador"
                             class="participante"
                             required>
@@ -895,12 +932,13 @@
 
                     <div class="campo">
 
-                        <label>
+                        <label for="coorientador">
                             Nome completo
                         </label>
 
                         <input
                             type="text"
+                            id="coorientador"
                             name="Professor_coorientador"
                             class="participante">
 
@@ -924,6 +962,8 @@
             </div>
 
 
+
+            <!-- 5. PAGAMENTO -->
 
             <div class="grupo-formulario">
 
@@ -974,29 +1014,31 @@
 
 
 
+            <!-- 6. DOCUMENTAÇÃO -->
+
             <div class="grupo-formulario">
 
                 <h3>
-                    6. Documentação
+                    6. Termos de Autorização de Uso de Imagem e Voz
                 </h3>
 
 
                 <div class="documento-box">
 
                     <strong>
-                        📄 Termo de Autorização de Uso de Imagem e Voz
+                        📄 Modelo oficial do termo
                     </strong>
 
                     <p>
-                        O termo deverá ser preenchido individualmente
-                        para cada participante da equipe.
+                        Cada participante da equipe deverá possuir
+                        seu próprio termo de autorização.
                     </p>
 
                     <p>
-                        Quando o participante for menor de 18 anos,
-                        o documento deverá ser assinado pelo responsável legal.
-                        Quando for maior de 18 anos,
-                        o próprio participante poderá assinar.
+                        Para menores de 18 anos,
+                        o termo deverá ser assinado pelo responsável legal.
+                        Participantes maiores de 18 anos
+                        poderão assinar o próprio documento.
                     </p>
 
                     <a
@@ -1004,40 +1046,191 @@
                         href="../documentos/termo_autorizacao_imagem_voz_abciencias_2026.pdf"
                         target="_blank"
                         rel="noopener noreferrer">
+
                         Baixar modelo do Termo de Autorização
+
                     </a>
 
                 </div>
 
 
-                <div class="campo">
+                <div class="limite-arquivos">
 
-                    <label for="autorizacao">
-                        Termos de autorização de uso de imagem e voz *
-                    </label>
+                    <strong>⚠️ Atenção ao tamanho dos arquivos</strong>
 
-                    <input
-                        type="file"
-                        id="autorizacao"
-                        name="Autorizacao_imagem_voz[]"
-                        accept=".pdf,.jpg,.jpeg,.png"
-                        multiple
-                        required>
+                    <br><br>
+
+                    O tamanho total de todos os documentos enviados
+                    neste formulário, incluindo comprovante PIX e termos,
+                    não deve ultrapassar <strong>10 MB</strong>.
+
+                    <br><br>
+
+                    Recomendamos fotografar ou digitalizar os documentos
+                    em boa qualidade, mas evitando arquivos muito grandes.
+
+                </div>
+
+
+
+                <!-- TERMO ESTUDANTE 1 -->
+
+                <div class="termo-box">
+
+                    <strong>
+                        Termo — Estudante 1 *
+                    </strong>
+
+                    <div class="campo">
+
+                        <input
+                            type="file"
+                            id="termoEstudante1"
+                            name="Termo_Estudante_1"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TERMO ESTUDANTE 2 -->
+
+                <div class="termo-box"
+                     id="boxTermoEstudante2">
+
+                    <strong>
+                        Termo — Estudante 2
+                    </strong>
+
+                    <div class="campo">
+
+                        <input
+                            type="file"
+                            id="termoEstudante2"
+                            name="Termo_Estudante_2"
+                            accept=".pdf,.jpg,.jpeg,.png">
+
+                    </div>
 
                     <p class="observacao">
-                        Anexe os termos preenchidos e assinados
-                        de todos os participantes da equipe.
-                        <br><br>
-                        Você pode selecionar vários arquivos de uma só vez.
-                        <br>
-                        Formatos aceitos: PDF, JPG, JPEG ou PNG.
+                        Obrigatório somente se houver Estudante 2.
                     </p>
 
                 </div>
 
+
+
+                <!-- TERMO ESTUDANTE 3 -->
+
+                <div class="termo-box"
+                     id="boxTermoEstudante3">
+
+                    <strong>
+                        Termo — Estudante 3
+                    </strong>
+
+                    <div class="campo">
+
+                        <input
+                            type="file"
+                            id="termoEstudante3"
+                            name="Termo_Estudante_3"
+                            accept=".pdf,.jpg,.jpeg,.png">
+
+                    </div>
+
+                    <p class="observacao">
+                        Obrigatório somente se houver Estudante 3.
+                    </p>
+
+                </div>
+
+
+
+                <!-- TERMO ESTUDANTE 4 -->
+
+                <div class="termo-box"
+                     id="boxTermoEstudante4">
+
+                    <strong>
+                        Termo — Estudante 4
+                    </strong>
+
+                    <div class="campo">
+
+                        <input
+                            type="file"
+                            id="termoEstudante4"
+                            name="Termo_Estudante_4"
+                            accept=".pdf,.jpg,.jpeg,.png">
+
+                    </div>
+
+                    <p class="observacao">
+                        Obrigatório somente se houver Estudante 4.
+                    </p>
+
+                </div>
+
+
+
+                <!-- TERMO ORIENTADOR -->
+
+                <div class="termo-box">
+
+                    <strong>
+                        Termo — Professor orientador *
+                    </strong>
+
+                    <div class="campo">
+
+                        <input
+                            type="file"
+                            id="termoOrientador"
+                            name="Termo_Professor_Orientador"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TERMO COORIENTADOR -->
+
+                <div class="termo-box"
+                     id="boxTermoCoorientador">
+
+                    <strong>
+                        Termo — Professor coorientador
+                    </strong>
+
+                    <div class="campo">
+
+                        <input
+                            type="file"
+                            id="termoCoorientador"
+                            name="Termo_Professor_Coorientador"
+                            accept=".pdf,.jpg,.jpeg,.png">
+
+                    </div>
+
+                    <p class="observacao">
+                        Obrigatório somente se houver professor coorientador.
+                    </p>
+
+                </div>
+
+
             </div>
 
 
+
+            <!-- 7. CONFIRMAÇÃO -->
 
             <div class="grupo-formulario">
 
@@ -1170,7 +1363,9 @@
             <a href="https://www.instagram.com/abci.encias?igsh=MWxobHc5eThuZXZkYg=="
                target="_blank"
                rel="noopener noreferrer">
+
                 📷 @abci.encias
+
             </a>
 
         </div>
@@ -1195,9 +1390,10 @@
 
 <script>
 
-/* ==========================================
-   COPIAR CHAVE PIX
-========================================== */
+
+/* ==================================================
+   COPIAR PIX
+================================================== */
 
 function copiarPix() {
 
@@ -1211,9 +1407,10 @@ function copiarPix() {
 }
 
 
-/* ==========================================
-   CÁLCULO DA TAXA
-========================================== */
+
+/* ==================================================
+   CÁLCULO AUTOMÁTICO DA TAXA
+================================================== */
 
 const participantes =
     document.querySelectorAll(".participante");
@@ -1289,9 +1486,10 @@ participantes.forEach(function(campo) {
 calcularTaxa();
 
 
-/* ==========================================
-   CAMPOS DINÂMICOS DE CATEGORIA
-========================================== */
+
+/* ==================================================
+   CATEGORIA / AEE / ÁREA DO CONHECIMENTO
+================================================== */
 
 function verificarCategoria() {
 
@@ -1319,7 +1517,9 @@ function verificarCategoria() {
         campoArea.style.display = "block";
         area.required = true;
 
-    } else {
+    }
+
+    else {
 
         campoArea.style.display = "none";
         area.required = false;
@@ -1335,7 +1535,9 @@ function verificarCategoria() {
         campoAee.style.display = "block";
         nivelAee.required = true;
 
-    } else {
+    }
+
+    else {
 
         campoAee.style.display = "none";
         nivelAee.required = false;
@@ -1348,8 +1550,179 @@ function verificarCategoria() {
 
 verificarCategoria();
 
+
+
+/* ==================================================
+   TERMOS OPCIONAIS TORNAM-SE OBRIGATÓRIOS
+   QUANDO O PARTICIPANTE É INFORMADO
+================================================== */
+
+function configurarTermo(
+    campoNomeId,
+    campoTermoId,
+    boxId
+) {
+
+    const campoNome =
+        document.getElementById(campoNomeId);
+
+    const campoTermo =
+        document.getElementById(campoTermoId);
+
+    const box =
+        document.getElementById(boxId);
+
+
+    function atualizar() {
+
+        const existeParticipante =
+            campoNome.value.trim() !== "";
+
+
+        campoTermo.required =
+            existeParticipante;
+
+
+        if (existeParticipante) {
+
+            box.classList.remove(
+                "termo-inativo"
+            );
+
+        }
+
+        else {
+
+            box.classList.add(
+                "termo-inativo"
+            );
+
+            campoTermo.value = "";
+
+        }
+
+    }
+
+
+    campoNome.addEventListener(
+        "input",
+        atualizar
+    );
+
+
+    atualizar();
+
+}
+
+
+
+configurarTermo(
+    "estudante2",
+    "termoEstudante2",
+    "boxTermoEstudante2"
+);
+
+
+configurarTermo(
+    "estudante3",
+    "termoEstudante3",
+    "boxTermoEstudante3"
+);
+
+
+configurarTermo(
+    "estudante4",
+    "termoEstudante4",
+    "boxTermoEstudante4"
+);
+
+
+configurarTermo(
+    "coorientador",
+    "termoCoorientador",
+    "boxTermoCoorientador"
+);
+
+
+
+/* ==================================================
+   VERIFICAÇÃO DO LIMITE TOTAL DE 10 MB
+================================================== */
+
+document.getElementById(
+    "formInscricao"
+).addEventListener(
+    "submit",
+    function(event) {
+
+        const arquivos =
+            document.querySelectorAll(
+                'input[type="file"]'
+            );
+
+
+        let tamanhoTotal = 0;
+
+
+        arquivos.forEach(function(input) {
+
+            if (
+                input.files &&
+                input.files.length > 0
+            ) {
+
+                for (
+                    let i = 0;
+                    i < input.files.length;
+                    i++
+                ) {
+
+                    tamanhoTotal +=
+                        input.files[i].size;
+
+                }
+
+            }
+
+        });
+
+
+        const limite =
+            10 * 1024 * 1024;
+
+
+        if (
+            tamanhoTotal > limite
+        ) {
+
+            event.preventDefault();
+
+
+            const tamanhoMB =
+                (
+                    tamanhoTotal /
+                    1024 /
+                    1024
+                ).toFixed(2);
+
+
+            alert(
+                "Os arquivos selecionados totalizam " +
+                tamanhoMB +
+                " MB.\n\n" +
+                "O limite total é de 10 MB.\n\n" +
+                "Reduza o tamanho das imagens ou PDFs e tente novamente."
+            );
+
+        }
+
+    }
+);
+
+
 </script>
 
 
 </body>
+
 </html>

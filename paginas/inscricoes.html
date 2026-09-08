@@ -374,7 +374,8 @@
 
             <a href="edital.html">
                 Edital 01/2026
-            </a>.
+            </a>
+            e a Retificação nº 01.
 
         </div>
 
@@ -463,8 +464,6 @@
             id="formInscricao">
 
 
-            <!-- CONFIGURAÇÕES DO ENVIO -->
-
             <input type="hidden"
                    name="_subject"
                    value="Nova inscrição — II ABCiências 2026">
@@ -495,8 +494,6 @@
                 e anexe os documentos solicitados.
             </p>
 
-
-            <!-- 1. DADOS DA ESCOLA -->
 
             <div class="grupo-formulario">
 
@@ -581,8 +578,6 @@
 
             </div>
 
-
-            <!-- 2. DADOS DO PROJETO -->
 
             <div class="grupo-formulario">
 
@@ -672,11 +667,16 @@
                             Ciências Humanas e Sociais Aplicadas
                         </option>
 
+                        <option value="Engenharia e Robótica">
+                            Engenharia e Robótica
+                        </option>
+
                     </select>
 
                     <p class="observacao">
-                        Campo aplicável principalmente às categorias
-                        Jovens Investigadores e Exploradores do Saber.
+                        Campo aplicável às categorias Jovens Investigadores
+                        e Exploradores do Saber, conforme as áreas previstas
+                        no Edital e na Retificação nº 01.
                     </p>
 
                 </div>
@@ -720,8 +720,6 @@
 
                 </div>
 
-
-                <!-- MODELO DE RESUMO E OBJETIVOS -->
 
                 <div class="modelo-box">
 
@@ -774,8 +772,6 @@
 
             </div>
 
-
-            <!-- 3. ESTUDANTES -->
 
             <div class="grupo-formulario">
 
@@ -846,8 +842,6 @@
 
             </div>
 
-
-            <!-- 4. PROFESSORES -->
 
             <div class="grupo-formulario">
 
@@ -927,8 +921,6 @@
             </div>
 
 
-            <!-- 5. PAGAMENTO -->
-
             <div class="grupo-formulario">
 
                 <h3>
@@ -975,8 +967,6 @@
 
             </div>
 
-
-            <!-- 6. TERMOS -->
 
             <div class="grupo-formulario">
 
@@ -1160,8 +1150,6 @@
             </div>
 
 
-            <!-- 7. CONFIRMAÇÃO -->
-
             <div class="grupo-formulario">
 
                 <h3>
@@ -1200,7 +1188,8 @@
                         <span>
                             Declaro que li e estou de acordo
                             com as normas e condições
-                            estabelecidas no Edital 01/2026.
+                            estabelecidas no Edital 01/2026
+                            e na Retificação nº 01.
                         </span>
 
                     </label>
@@ -1314,10 +1303,6 @@
 <script>
 
 
-/* ==================================================
-   COPIAR CHAVE PIX
-================================================== */
-
 function copiarPix() {
 
     const chave =
@@ -1329,10 +1314,6 @@ function copiarPix() {
 
 }
 
-
-/* ==================================================
-   CÁLCULO AUTOMÁTICO DA TAXA
-================================================== */
 
 const participantes =
     document.querySelectorAll(".participante");
@@ -1407,10 +1388,6 @@ participantes.forEach(function(campo) {
 
 calcularTaxa();
 
-
-/* ==================================================
-   LIMITE TOTAL DE 10 MB
-================================================== */
 
 document.getElementById(
     "formInscricao"

@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -10,7 +11,9 @@
     <meta name="description"
           content="Inscrições para a II ABCiências — Mostra ABCCEL de Ciências 2026.">
 
-    <title>Inscrições 2026 | Portal ABCiências</title>
+    <title>
+        Inscrições 2026 | Portal ABCiências
+    </title>
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -24,6 +27,7 @@
 
     <link rel="stylesheet"
           href="../css/style.css">
+
 
     <style>
 
@@ -142,7 +146,17 @@
             margin-bottom: 20px;
         }
 
-        .campo label {
+        .campo-condicional {
+            display: none;
+            padding: 18px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+        }
+
+        .campo label,
+        .campo-condicional label {
             display: block;
             margin-bottom: 7px;
             font-weight: 700;
@@ -150,7 +164,8 @@
 
         .campo input,
         .campo select,
-        .campo textarea {
+        .campo textarea,
+        .campo-condicional select {
             display: block;
             width: 100%;
             padding: 13px;
@@ -193,6 +208,16 @@
             font-size: .92rem;
             color: #475569;
             line-height: 1.5;
+        }
+
+        .aviso-categoria {
+            margin-top: 10px;
+            padding: 13px 15px;
+            border-radius: 9px;
+            background: #eef6ff;
+            font-size: .94rem;
+            line-height: 1.55;
+            color: #334155;
         }
 
         .documento-box {
@@ -286,10 +311,12 @@
 
 </head>
 
+
 <body>
 
 
-<header class="topo" id="topo">
+<header class="topo"
+        id="topo">
 
     <div class="container topo__conteudo">
 
@@ -301,32 +328,68 @@
                  alt="Logomarca ABCiências">
 
             <div>
-                <strong>ABCiências</strong>
-                <span>Mostra ABCCEL de Ciências</span>
+
+                <strong>
+                    ABCiências
+                </strong>
+
+                <span>
+                    Mostra ABCCEL de Ciências
+                </span>
+
             </div>
 
         </a>
 
+
         <button class="menu-botao"
                 aria-label="Abrir menu"
                 aria-expanded="false">
+
             ☰
+
         </button>
+
 
         <nav class="menu">
 
-            <a href="../index.html">Início</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="edicoes.html">Edições</a>
-            <a href="cronograma.html">Cronograma</a>
-            <a href="edital.html">Edital</a>
-            <a href="inscricoes.html">Inscrições</a>
-            <a href="galeria.html">Galeria</a>
-            <a href="contato.html">Contato</a>
+            <a href="../index.html">
+                Início
+            </a>
+
+            <a href="sobre.html">
+                Sobre
+            </a>
+
+            <a href="edicoes.html">
+                Edições
+            </a>
+
+            <a href="cronograma.html">
+                Cronograma
+            </a>
+
+            <a href="edital.html">
+                Edital
+            </a>
+
+            <a href="inscricoes.html">
+                Inscrições
+            </a>
+
+            <a href="galeria.html">
+                Galeria
+            </a>
+
+            <a href="contato.html">
+                Contato
+            </a>
 
             <a class="menu-destaque"
                href="avaliadores.html">
+
                 Área do Avaliador
+
             </a>
 
         </nav>
@@ -336,7 +399,9 @@
 </header>
 
 
+
 <main class="pagina-inscricao">
+
 
     <div class="inscricao-cabecalho">
 
@@ -349,14 +414,25 @@
         </h1>
 
         <p>
+
             Faça a inscrição de sua equipe para participar da
-            <strong>II Mostra ABCCEL de Ciências — ABCiências</strong>,
+
+            <strong>
+                II Mostra ABCCEL de Ciências — ABCiências
+            </strong>,
+
             que será realizada em
-            <strong>30 de outubro de 2026</strong>,
+
+            <strong>
+                30 de outubro de 2026
+            </strong>,
+
             em Bela Cruz – CE.
+
         </p>
 
     </div>
+
 
 
     <div class="inscricao-conteudo">
@@ -364,7 +440,10 @@
 
         <div class="aviso-inscricao">
 
-            <strong>📅 Período de inscrições:</strong>
+            <strong>
+                📅 Período de inscrições:
+            </strong>
+
             27 de agosto a 02 de outubro de 2026.
 
             <br><br>
@@ -373,11 +452,11 @@
             leia atentamente o
 
             <a href="edital.html">
-                Edital 01/2026
-            </a>
-            e a Retificação nº 01.
+                Edital 01/2026 e sua Retificação nº 01
+            </a>.
 
         </div>
+
 
 
         <section class="bloco-inscricao">
@@ -391,36 +470,58 @@
             </h2>
 
             <p>
+
                 A taxa é de
-                <strong>R$ 5,00 por participante</strong>,
-                incluindo estudantes, professor orientador
-                e professor coorientador, quando houver.
+
+                <strong>
+                    R$ 5,00 por participante
+                </strong>,
+
+                incluindo estudantes,
+                professor orientador
+                e professor coorientador,
+                quando houver.
+
             </p>
+
 
             <div class="pix-dados">
 
                 <p>
-                    <strong>Pagamento via PIX</strong>
+                    <strong>
+                        Pagamento via PIX
+                    </strong>
                 </p>
 
                 <p>
-                    <strong>Chave PIX:</strong>
+                    <strong>
+                        Chave PIX:
+                    </strong>
                 </p>
 
                 <div class="pix-chave"
                      id="chavePix">
+
                     88997141461
+
                 </div>
 
                 <p>
-                    <strong>Favorecido:</strong>
+
+                    <strong>
+                        Favorecido:
+                    </strong>
+
                     Francisco Fabiano Araujo
+
                 </p>
 
                 <button type="button"
                         class="botao-copiar"
                         onclick="copiarPix()">
+
                     📋 Copiar chave PIX
+
                 </button>
 
             </div>
@@ -438,17 +539,23 @@
                 </p>
 
                 <p>
+
                     Participantes:
+
                     <strong id="quantidadeParticipantes">
                         0
                     </strong>
+
                 </p>
 
                 <div class="taxa-total">
+
                     Total:
+
                     <span id="valorTotal">
                         R$ 0,00
                     </span>
+
                 </div>
 
             </div>
@@ -456,13 +563,15 @@
         </section>
 
 
-        <form
-            class="formulario-inscricao"
-            action="https://formsubmit.co/abciencias2025@gmail.com"
-            method="POST"
-            enctype="multipart/form-data"
-            id="formInscricao">
 
+        <form class="formulario-inscricao"
+              action="https://formsubmit.co/abciencias2025@gmail.com"
+              method="POST"
+              enctype="multipart/form-data"
+              id="formInscricao">
+
+
+            <!-- CONFIGURAÇÕES -->
 
             <input type="hidden"
                    name="_subject"
@@ -485,21 +594,30 @@
                    id="valorTotalFormulario">
 
 
+
             <h2>
                 Formulário de inscrição
             </h2>
 
             <p>
+
                 Preencha atentamente todos os campos
                 e anexe os documentos solicitados.
+
             </p>
 
+
+
+            <!-- =================================================
+                 1. DADOS DA ESCOLA
+            ================================================== -->
 
             <div class="grupo-formulario">
 
                 <h3>
                     1. Dados da escola
                 </h3>
+
 
                 <div class="campo">
 
@@ -516,6 +634,7 @@
 
 
                 <div class="linha-formulario">
+
 
                     <div class="campo">
 
@@ -561,6 +680,7 @@
 
                     </div>
 
+
                 </div>
 
 
@@ -579,11 +699,17 @@
             </div>
 
 
+
+            <!-- =================================================
+                 2. DADOS DO PROJETO
+            ================================================== -->
+
             <div class="grupo-formulario">
 
                 <h3>
                     2. Dados do projeto
                 </h3>
+
 
                 <div class="campo">
 
@@ -597,6 +723,7 @@
                            required>
 
                 </div>
+
 
 
                 <div class="campo">
@@ -635,13 +762,27 @@
 
                     </select>
 
+
+                    <div class="aviso-categoria"
+                         id="orientacaoCategoria">
+
+                        Selecione a categoria do projeto.
+                        Os campos complementares serão apresentados
+                        automaticamente quando forem necessários.
+
+                    </div>
+
                 </div>
 
 
-                <div class="campo">
+
+                <!-- ÁREA DO CONHECIMENTO -->
+
+                <div class="campo-condicional"
+                     id="blocoArea">
 
                     <label for="area">
-                        Área do conhecimento
+                        Área do conhecimento *
                     </label>
 
                     <select id="area"
@@ -651,56 +792,40 @@
                             Selecione
                         </option>
 
-                        <option value="Linguagens, Códigos e suas Tecnologias">
-                            Linguagens, Códigos e suas Tecnologias
-                        </option>
-
-                        <option value="Matemática e suas Tecnologias">
-                            Matemática e suas Tecnologias
-                        </option>
-
-                        <option value="Ciências da Natureza e suas Tecnologias">
-                            Ciências da Natureza e suas Tecnologias
-                        </option>
-
-                        <option value="Ciências Humanas e Sociais Aplicadas">
-                            Ciências Humanas e Sociais Aplicadas
-                        </option>
-
-                        <option value="Engenharia e Robótica">
-                            Engenharia e Robótica
-                        </option>
-
                     </select>
 
-                    <p class="observacao">
-                        Campo aplicável às categorias Jovens Investigadores
-                        e Exploradores do Saber, conforme as áreas previstas
-                        no Edital e na Retificação nº 01.
+
+                    <p class="observacao"
+                       id="observacaoArea">
+
                     </p>
 
                 </div>
 
 
-                <div class="campo">
+
+                <!-- NÍVEL / MODALIDADE AEE -->
+
+                <div class="campo-condicional"
+                     id="blocoAee">
 
                     <label for="nivelAee">
-                        Nível/modalidade AEE
+                        Nível/modalidade de ensino *
                     </label>
 
                     <select id="nivelAee"
                             name="Nivel_modalidade_AEE">
 
                         <option value="">
-                            Não se aplica / Selecione
+                            Selecione
                         </option>
 
                         <option value="AEE - Anos Iniciais">
-                            AEE — Anos Iniciais
+                            AEE — Anos Iniciais do Ensino Fundamental
                         </option>
 
                         <option value="AEE - Anos Finais">
-                            AEE — Anos Finais
+                            AEE — Anos Finais do Ensino Fundamental
                         </option>
 
                         <option value="AEE - Ensino Médio">
@@ -708,18 +833,24 @@
                         </option>
 
                         <option value="AEE - EJA">
-                            AEE — EJA
+                            AEE — Educação de Jovens e Adultos (EJA)
                         </option>
 
                     </select>
 
+
                     <p class="observacao">
-                        Preencha somente para projetos da categoria
-                        Saberes sem Fronteiras — AEE.
+
+                        Selecione o nível ou modalidade de ensino
+                        dos participantes do projeto.
+
                     </p>
 
                 </div>
 
+
+
+                <!-- MODELO DE RESUMO E OBJETIVOS -->
 
                 <div class="modelo-box">
 
@@ -728,17 +859,23 @@
                     </strong>
 
                     <p>
+
                         Conforme previsto no Edital 01/2026,
                         o resumo e os objetivos do projeto deverão ser
                         apresentados de acordo com o modelo oficial
                         disponibilizado pela Comissão Organizadora.
+
                     </p>
 
                     <p>
-                        Baixe o arquivo, preencha todas as informações
-                        solicitadas e anexe o documento preenchido
+
+                        Baixe o arquivo,
+                        preencha todas as informações solicitadas
+                        e anexe o documento preenchido
                         no campo logo abaixo.
+
                     </p>
+
 
                     <a class="botao botao--azul"
                        href="../documentos/Modelo_Resumo_e_Objetivos_ABCiencias_2026.docx"
@@ -751,10 +888,13 @@
                 </div>
 
 
+
                 <div class="campo">
 
                     <label for="modeloProjeto">
+
                         Modelo de Resumo e Objetivos preenchido *
+
                     </label>
 
                     <input type="file"
@@ -764,14 +904,22 @@
                            required>
 
                     <p class="observacao">
+
                         Anexe o modelo devidamente preenchido.
                         Formatos aceitos: DOC, DOCX ou PDF.
+
                     </p>
 
                 </div>
 
+
             </div>
 
+
+
+            <!-- =================================================
+                 3. ESTUDANTES
+            ================================================== -->
 
             <div class="grupo-formulario">
 
@@ -843,11 +991,17 @@
             </div>
 
 
+
+            <!-- =================================================
+                 4. PROFESSORES
+            ================================================== -->
+
             <div class="grupo-formulario">
 
                 <h3>
                     4. Professores
                 </h3>
+
 
                 <div class="campo">
 
@@ -921,26 +1075,38 @@
             </div>
 
 
+
+            <!-- =================================================
+                 5. PAGAMENTO
+            ================================================== -->
+
             <div class="grupo-formulario">
 
                 <h3>
                     5. Pagamento
                 </h3>
 
+
                 <div class="resumo-pagamento">
 
                     <p>
+
                         Número de participantes:
+
                         <strong id="resumoParticipantes">
                             0
                         </strong>
+
                     </p>
 
                     <p>
+
                         Valor da inscrição:
+
                         <strong id="resumoValor">
                             R$ 0,00
                         </strong>
+
                     </p>
 
                 </div>
@@ -968,6 +1134,11 @@
             </div>
 
 
+
+            <!-- =================================================
+                 6. TERMOS
+            ================================================== -->
+
             <div class="grupo-formulario">
 
                 <h3>
@@ -982,17 +1153,23 @@
                     </strong>
 
                     <p>
+
                         Cada participante da equipe deverá possuir
                         seu próprio termo de autorização.
+
                     </p>
 
                     <p>
+
                         Para participantes menores de 18 anos,
                         o documento deverá ser assinado
                         pelo responsável legal.
+
                         Participantes maiores de 18 anos
                         poderão assinar o próprio termo.
+
                     </p>
+
 
                     <a class="botao botao--azul"
                        href="../documentos/termo_autorizacao_imagem_voz_abciencias_2026.pdf"
@@ -1004,6 +1181,7 @@
                     </a>
 
                 </div>
+
 
 
                 <div class="limite-arquivos">
@@ -1018,14 +1196,19 @@
                     incluindo modelo de resumo e objetivos,
                     comprovante PIX e termos de autorização,
                     não deve ultrapassar
-                    <strong>10 MB</strong>.
+
+                    <strong>
+                        10 MB
+                    </strong>.
 
                     <br><br>
 
-                    Caso necessário, reduza o tamanho das imagens
+                    Caso necessário,
+                    reduza o tamanho das imagens
                     ou salve os documentos em PDF compactado.
 
                 </div>
+
 
 
                 <div class="termo-box">
@@ -1044,6 +1227,7 @@
                     </div>
 
                 </div>
+
 
 
                 <div class="termo-box">
@@ -1067,6 +1251,7 @@
                 </div>
 
 
+
                 <div class="termo-box">
 
                     <strong>
@@ -1086,6 +1271,7 @@
                     </p>
 
                 </div>
+
 
 
                 <div class="termo-box">
@@ -1109,6 +1295,7 @@
                 </div>
 
 
+
                 <div class="termo-box">
 
                     <strong>
@@ -1125,6 +1312,7 @@
                     </div>
 
                 </div>
+
 
 
                 <div class="termo-box">
@@ -1147,8 +1335,14 @@
 
                 </div>
 
+
             </div>
 
+
+
+            <!-- =================================================
+                 7. CONFIRMAÇÃO
+            ================================================== -->
 
             <div class="grupo-formulario">
 
@@ -1167,8 +1361,10 @@
                                required>
 
                         <span>
+
                             Declaro que as informações apresentadas
                             nesta inscrição são verdadeiras.
+
                         </span>
 
                     </label>
@@ -1186,10 +1382,12 @@
                                required>
 
                         <span>
+
                             Declaro que li e estou de acordo
                             com as normas e condições
                             estabelecidas no Edital 01/2026
                             e na Retificação nº 01.
+
                         </span>
 
                     </label>
@@ -1209,14 +1407,17 @@
 
         </form>
 
+
     </div>
 
 </main>
 
 
+
 <footer class="rodape">
 
     <div class="container rodape__grid">
+
 
         <div>
 
@@ -1225,10 +1426,12 @@
             </strong>
 
             <p>
+
                 Mostra ABCCEL de Ciências da Educação Básica.
                 Um espaço para investigar, criar,
                 apresentar e valorizar a ciência
                 feita por estudantes.
+
             </p>
 
         </div>
@@ -1283,6 +1486,7 @@
 
         </div>
 
+
     </div>
 
 
@@ -1297,11 +1501,16 @@
 </footer>
 
 
+
 <script src="../js/script.js"></script>
 
 
 <script>
 
+
+/* ==========================================================
+   COPIAR PIX
+========================================================== */
 
 function copiarPix() {
 
@@ -1310,30 +1519,316 @@ function copiarPix() {
 
     navigator.clipboard.writeText(chave);
 
-    alert("Chave PIX copiada: " + chave);
+    alert(
+        "Chave PIX copiada: " + chave
+    );
 
 }
 
 
+
+/* ==========================================================
+   CAMPOS DINÂMICOS CONFORME A CATEGORIA
+========================================================== */
+
+const categoria =
+    document.getElementById("categoria");
+
+const blocoArea =
+    document.getElementById("blocoArea");
+
+const blocoAee =
+    document.getElementById("blocoAee");
+
+const area =
+    document.getElementById("area");
+
+const nivelAee =
+    document.getElementById("nivelAee");
+
+const observacaoArea =
+    document.getElementById("observacaoArea");
+
+const orientacaoCategoria =
+    document.getElementById("orientacaoCategoria");
+
+
+const areasJovens = [
+
+    {
+        valor: "Linguagens, Códigos e suas Tecnologias",
+        texto: "Linguagens, Códigos e suas Tecnologias"
+    },
+
+    {
+        valor: "Matemática e suas Tecnologias",
+        texto: "Matemática e suas Tecnologias"
+    },
+
+    {
+        valor: "Ciências da Natureza e suas Tecnologias",
+        texto: "Ciências da Natureza e suas Tecnologias"
+    },
+
+    {
+        valor: "Ciências Humanas e Sociais Aplicadas",
+        texto: "Ciências Humanas e Sociais Aplicadas"
+    }
+
+];
+
+
+const areasEnsinoMedio = [
+
+    {
+        valor: "Linguagens, Códigos, suas Tecnologias e Tecnologias Digitais",
+        texto: "Linguagens, Códigos, suas Tecnologias e Tecnologias Digitais"
+    },
+
+    {
+        valor: "Matemática e suas Tecnologias",
+        texto: "Matemática e suas Tecnologias"
+    },
+
+    {
+        valor: "Ciências da Natureza, suas Tecnologias e Educação Ambiental",
+        texto: "Ciências da Natureza, suas Tecnologias e Educação Ambiental"
+    },
+
+    {
+        valor: "Ciências Humanas e Sociais Aplicadas",
+        texto: "Ciências Humanas e Sociais Aplicadas"
+    },
+
+    {
+        valor: "Engenharia e Robótica",
+        texto: "Engenharia e Robótica"
+    }
+
+];
+
+
+function preencherAreas(lista) {
+
+    area.innerHTML =
+        '<option value="">Selecione</option>';
+
+
+    lista.forEach(function(item) {
+
+        const opcao =
+            document.createElement("option");
+
+        opcao.value =
+            item.valor;
+
+        opcao.textContent =
+            item.texto;
+
+        area.appendChild(opcao);
+
+    });
+
+}
+
+
+
+function atualizarCamposCategoria() {
+
+    const valor =
+        categoria.value;
+
+
+    /* Reinicia os campos */
+
+    blocoArea.style.display =
+        "none";
+
+    blocoAee.style.display =
+        "none";
+
+
+    area.required =
+        false;
+
+    nivelAee.required =
+        false;
+
+
+    area.value =
+        "";
+
+    nivelAee.value =
+        "";
+
+
+    /* Nenhuma categoria selecionada */
+
+    if (valor === "") {
+
+        orientacaoCategoria.innerHTML =
+            "Selecione a categoria do projeto. " +
+            "Os campos complementares serão apresentados " +
+            "automaticamente quando forem necessários.";
+
+        return;
+
+    }
+
+
+    /* PEQUENOS CURIOSOS */
+
+    if (valor === "Pequenos Curiosos") {
+
+        orientacaoCategoria.innerHTML =
+            "<strong>Pequenos Curiosos:</strong> " +
+            "não é necessário selecionar área do conhecimento.";
+
+        return;
+
+    }
+
+
+    /* JOVENS INVESTIGADORES */
+
+    if (valor === "Jovens Investigadores") {
+
+        preencherAreas(
+            areasJovens
+        );
+
+
+        blocoArea.style.display =
+            "block";
+
+        area.required =
+            true;
+
+
+        observacaoArea.textContent =
+            "Selecione a área do conhecimento em que " +
+            "o projeto será inscrito.";
+
+
+        orientacaoCategoria.innerHTML =
+            "<strong>Jovens Investigadores — Anos Finais:</strong> " +
+            "selecione a área do conhecimento do projeto.";
+
+        return;
+
+    }
+
+
+    /* EXPLORADORES DO SABER */
+
+    if (valor === "Exploradores do Saber") {
+
+        preencherAreas(
+            areasEnsinoMedio
+        );
+
+
+        blocoArea.style.display =
+            "block";
+
+        area.required =
+            true;
+
+
+        observacaoArea.textContent =
+            "Selecione a área correspondente ao projeto. " +
+            "Engenharia e Robótica foi incluída pela Retificação nº 01.";
+
+
+        orientacaoCategoria.innerHTML =
+            "<strong>Exploradores do Saber — Ensino Médio:</strong> " +
+            "selecione a área do conhecimento do projeto.";
+
+        return;
+
+    }
+
+
+    /* SABERES DA VIDA */
+
+    if (valor === "Saberes da Vida") {
+
+        orientacaoCategoria.innerHTML =
+            "<strong>Saberes da Vida — EJA:</strong> " +
+            "esta categoria não possui subdivisão " +
+            "por áreas do conhecimento.";
+
+        return;
+
+    }
+
+
+    /* SABERES SEM FRONTEIRAS */
+
+    if (valor === "Saberes sem Fronteiras") {
+
+        blocoAee.style.display =
+            "block";
+
+        nivelAee.required =
+            true;
+
+
+        orientacaoCategoria.innerHTML =
+            "<strong>Saberes sem Fronteiras — AEE:</strong> " +
+            "selecione apenas o nível ou modalidade " +
+            "de ensino dos participantes.";
+
+        return;
+
+    }
+
+}
+
+
+categoria.addEventListener(
+    "change",
+    atualizarCamposCategoria
+);
+
+
+atualizarCamposCategoria();
+
+
+
+/* ==========================================================
+   CÁLCULO AUTOMÁTICO DA TAXA
+========================================================== */
+
 const participantes =
-    document.querySelectorAll(".participante");
+    document.querySelectorAll(
+        ".participante"
+    );
 
 
 function calcularTaxa() {
 
-    let quantidade = 0;
+    let quantidade =
+        0;
 
 
-    participantes.forEach(function(campo) {
+    participantes.forEach(
+        function(campo) {
 
-        if (campo.value.trim() !== "") {
-            quantidade++;
+            if (
+                campo.value.trim() !== ""
+            ) {
+
+                quantidade++;
+
+            }
+
         }
+    );
 
-    });
 
-
-    const valor = quantidade * 5;
+    const valor =
+        quantidade * 5;
 
 
     const valorFormatado =
@@ -1348,22 +1843,26 @@ function calcularTaxa() {
 
     document.getElementById(
         "quantidadeParticipantes"
-    ).textContent = quantidade;
+    ).textContent =
+        quantidade;
 
 
     document.getElementById(
         "valorTotal"
-    ).textContent = valorFormatado;
+    ).textContent =
+        valorFormatado;
 
 
     document.getElementById(
         "resumoParticipantes"
-    ).textContent = quantidade;
+    ).textContent =
+        quantidade;
 
 
     document.getElementById(
         "resumoValor"
-    ).textContent = valorFormatado;
+    ).textContent =
+        valorFormatado;
 
 
     document.getElementById(
@@ -1376,18 +1875,25 @@ function calcularTaxa() {
 }
 
 
-participantes.forEach(function(campo) {
+participantes.forEach(
+    function(campo) {
 
-    campo.addEventListener(
-        "input",
-        calcularTaxa
-    );
+        campo.addEventListener(
+            "input",
+            calcularTaxa
+        );
 
-});
+    }
+);
 
 
 calcularTaxa();
 
+
+
+/* ==========================================================
+   LIMITE TOTAL DOS ANEXOS — 10 MB
+========================================================== */
 
 document.getElementById(
     "formInscricao"
@@ -1395,35 +1901,40 @@ document.getElementById(
     "submit",
     function(event) {
 
+
         const arquivos =
             document.querySelectorAll(
                 'input[type="file"]'
             );
 
-        let tamanhoTotal = 0;
+
+        let tamanhoTotal =
+            0;
 
 
-        arquivos.forEach(function(input) {
+        arquivos.forEach(
+            function(input) {
 
-            if (
-                input.files &&
-                input.files.length > 0
-            ) {
-
-                for (
-                    let i = 0;
-                    i < input.files.length;
-                    i++
+                if (
+                    input.files &&
+                    input.files.length > 0
                 ) {
 
-                    tamanhoTotal +=
-                        input.files[i].size;
+                    for (
+                        let i = 0;
+                        i < input.files.length;
+                        i++
+                    ) {
+
+                        tamanhoTotal +=
+                            input.files[i].size;
+
+                    }
 
                 }
 
             }
-
-        });
+        );
 
 
         const limite =
@@ -1446,11 +1957,15 @@ document.getElementById(
 
 
             alert(
+
                 "Os arquivos selecionados totalizam " +
                 tamanhoMB +
                 " MB.\n\n" +
+
                 "O limite total permitido é de 10 MB.\n\n" +
+
                 "Reduza o tamanho dos arquivos e tente novamente."
+
             );
 
         }

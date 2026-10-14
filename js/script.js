@@ -11,7 +11,7 @@ if (botaoMenu && menu) {
 
 // Contador regressivo para a realização da II ABCiências.
 // Data da Mostra: 30/10/2026.
-const dataEvento = new Date('2026-10-30T08:00:00');
+const dataEvento = new Date('2026-11-03T08:00:00');
 
 
 function doisDigitos(valor) {

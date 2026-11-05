@@ -2,14 +2,13 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Inscrições para a II ABCiências — Mostra ABCCEL de Ciências 2026.">
+          content="Inscrições encerradas da II ABCiências — Mostra ABCCEL de Ciências 2026. Consulte o histórico da edição, o resultado oficial e os registros da Mostra.">
 
     <title>
         Inscrições 2026 | Portal ABCiências
@@ -61,7 +60,7 @@
 
         .aviso-inscricao,
         .bloco-inscricao,
-        .formulario-inscricao {
+        .inscricoes-encerradas {
             background: #ffffff;
             border-radius: 18px;
             box-shadow: 0 8px 30px rgba(0,0,0,.08);
@@ -80,226 +79,10 @@
             margin-bottom: 30px;
         }
 
-        .pix-dados {
-            margin-top: 20px;
-            padding: 20px;
-            background: #f5f7fa;
-            border-radius: 12px;
-        }
-
-        .pix-chave {
-            font-size: 1.3rem;
-            font-weight: 800;
-            word-break: break-all;
-        }
-
-        .botao-copiar {
-            margin-top: 10px;
-            padding: 11px 18px;
-            border: none;
-            border-radius: 9px;
-            cursor: pointer;
-            font-weight: 700;
-            background: #0f766e;
-            color: #ffffff;
-        }
-
-        .taxa-box {
-            margin-top: 20px;
-            padding: 18px;
-            background: #ecfdf5;
-            border-radius: 12px;
-        }
-
-        .taxa-total {
-            font-size: 1.6rem;
-            font-weight: 900;
-            margin-top: 8px;
-        }
-
-        .formulario-inscricao {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            transform: none !important;
-            padding: 35px;
-        }
-
-        .grupo-formulario {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            margin-top: 35px;
-            padding-top: 25px;
-            border-top: 1px solid #e5e7eb;
-        }
-
-        .grupo-formulario:first-of-type {
-            border-top: none;
-            margin-top: 20px;
-            padding-top: 0;
-        }
-
-        .campo {
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        .campo-condicional {
-            display: none;
-            padding: 18px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            background: #f8fafc;
-            border-left: 4px solid #2563eb;
-        }
-
-        .campo label,
-        .campo-condicional label {
-            display: block;
-            margin-bottom: 7px;
-            font-weight: 700;
-        }
-
-        .campo input,
-        .campo select,
-        .campo textarea,
-        .campo-condicional select {
-            display: block;
-            width: 100%;
-            padding: 13px;
-            border: 1px solid #cbd5e1;
-            border-radius: 9px;
-            font-family: inherit;
-            font-size: 1rem;
-            box-sizing: border-box;
-            background: #ffffff;
-            color: #111827;
-        }
-
-        .campo textarea {
-            min-height: 130px;
-            resize: vertical;
-        }
-
-        .linha-formulario {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .participante-box,
-        .termo-box {
-            background: #f8fafc;
-            padding: 18px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-        }
-
-        .participante-box > strong,
-        .termo-box > strong {
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .observacao {
-            margin-top: 7px;
-            font-size: .92rem;
-            color: #475569;
-            line-height: 1.5;
-        }
-
-        .aviso-categoria {
-            margin-top: 10px;
-            padding: 13px 15px;
-            border-radius: 9px;
-            background: #eef6ff;
-            font-size: .94rem;
-            line-height: 1.55;
-            color: #334155;
-        }
-
-        .documento-box {
-            background: #eef6ff;
-            border-left: 5px solid #2563eb;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-        }
-
-        .documento-box p {
-            line-height: 1.6;
-        }
-
-        .modelo-box {
-            background: #ecfdf5;
-            border-left: 5px solid #16a34a;
-            padding: 22px;
-            border-radius: 12px;
-            margin: 20px 0 25px;
-        }
-
-        .modelo-box p {
-            line-height: 1.6;
-        }
-
-        .limite-arquivos {
-            background: #fff7ed;
-            border-left: 5px solid #f97316;
-            padding: 18px;
-            border-radius: 12px;
-            margin: 20px 0;
-            line-height: 1.6;
-        }
-
-        .resumo-pagamento {
-            background: #fff7ed;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        .aceite {
-            background: #f8fafc;
-            padding: 18px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .aceite label {
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-        }
-
-        .aceite input {
-            margin-top: 5px;
-        }
-
-        .botao-enviar {
-            width: 100%;
-            padding: 17px;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 1.08rem;
-            font-weight: 800;
-            background: #1455d9;
-            color: #ffffff;
-        }
-
-        .botao-enviar:hover {
-            transform: translateY(-2px);
-        }
-
         .inscricoes-encerradas {
             max-width: 900px;
             margin: 0 auto;
             padding: 42px 35px;
-            background: #ffffff;
-            border-radius: 18px;
-            box-shadow: 0 8px 30px rgba(0,0,0,.08);
             text-align: center;
         }
 
@@ -320,25 +103,6 @@
             font-size: 1.02rem;
         }
 
-        .cronograma-proximas-etapas {
-            margin: 30px auto 20px;
-            max-width: 720px;
-            text-align: left;
-            background: #f8fafc;
-            border-left: 5px solid #16a34a;
-            border-radius: 14px;
-            padding: 24px;
-        }
-
-        .cronograma-proximas-etapas h3 {
-            margin-top: 0;
-            color: #0f2f68;
-        }
-
-        .cronograma-proximas-etapas p {
-            margin: 9px 0;
-        }
-
         .encerradas-destaque {
             display: inline-block;
             margin: 8px 0 4px;
@@ -348,13 +112,6 @@
             color: #1455d9;
             font-weight: 800;
         }
-
-        .encerradas-final {
-            margin-top: 26px;
-            font-weight: 800;
-            color: #0f2f68 !important;
-        }
-
 
         .conquista-edicao {
             margin: 24px auto;
@@ -375,17 +132,51 @@
             margin: 10px 0 0;
         }
 
+        .resumo-edicao {
+            margin: 30px auto 20px;
+            max-width: 760px;
+            text-align: left;
+            background: #f8fafc;
+            border-left: 5px solid #16a34a;
+            border-radius: 14px;
+            padding: 24px;
+        }
+
+        .resumo-edicao h3 {
+            margin-top: 0;
+            color: #0f2f68;
+        }
+
+        .resumo-edicao p {
+            margin: 9px 0;
+        }
+
+        .credenciais-box {
+            margin: 26px auto 10px;
+            max-width: 760px;
+            text-align: left;
+            padding: 24px;
+            border-radius: 14px;
+            background: #fff7ed;
+            border-left: 5px solid #f59e0b;
+        }
+
+        .credenciais-box h3 {
+            margin-top: 0;
+            color: #92400e;
+        }
+
+        .encerradas-final {
+            margin-top: 26px;
+            font-weight: 800;
+            color: #0f2f68 !important;
+        }
+
         @media(max-width: 700px) {
-
-            .linha-formulario {
-                grid-template-columns: 1fr;
-            }
-
-            .formulario-inscricao,
+            .inscricoes-encerradas,
             .bloco-inscricao {
                 padding: 22px;
             }
-
         }
 
     </style>
@@ -423,9 +214,7 @@
         <button class="menu-botao"
                 aria-label="Abrir menu"
                 aria-expanded="false">
-
             ☰
-
         </button>
 
         <nav class="menu">
@@ -441,9 +230,7 @@
 
             <a class="menu-destaque"
                href="avaliadores.html">
-
                 Área do Avaliador
-
             </a>
 
         </nav>
@@ -452,116 +239,174 @@
 
 </header>
 
+
 <main class="pagina-inscricao">
 
     <div class="inscricao-cabecalho">
 
         <span class="subtitulo">
-            II ABCiências
+            II ABCiências 2026
         </span>
 
         <h1>
-            Inscrições 2026
+            Inscrições encerradas
         </h1>
 
         <p>
-
             O período de inscrições da
-
-            <strong>
-                II Mostra ABCCEL de Ciências — ABCiências
-            </strong>
-
-            foi encerrado em
-
-            <strong>
-                02 de outubro de 2026
-            </strong>.
-
-            A Mostra será realizada em
-
-            <strong>
-                03 de novembro de 2026
-            </strong>,
-
-            em Bela Cruz – CE.
-
+            <strong>II Mostra ABCCEL de Ciências — ABCiências</strong>
+            ocorreu de <strong>27 de agosto a 02 de outubro de 2026</strong>.
+            A edição foi realizada em <strong>03 de novembro de 2026</strong>,
+            na EEEP Júlio França, em Bela Cruz – CE.
         </p>
 
     </div>
+
 
     <div class="inscricao-conteudo">
 
         <div class="aviso-inscricao">
 
             <strong>
-                📌 Inscrições encerradas
+                📌 Edição 2026 concluída
             </strong>
 
             <br><br>
 
-            O período de inscrições ocorreu de
-            <strong>27 de agosto a 02 de outubro de 2026</strong>.
+            As inscrições da II ABCiências estão encerradas.
+            Esta página permanece disponível como registro histórico
+            do processo de seleção e realização da edição 2026.
 
             <br><br>
 
             Consulte o
-
             <a href="edital.html">
-                Edital 01/2026 e suas Retificações nº 01 e nº 02
+                Edital 01/2026 e suas retificações
             </a>,
-
-            bem como o resultado oficial dos projetos aprovados e o cronograma atualizado.
+            o resultado oficial e os registros da Mostra.
 
         </div>
 
-        <section class="inscricoes-encerradas" aria-labelledby="tituloInscricoesEncerradas">
 
-            <div class="inscricoes-encerradas__icone">🔬</div>
+        <section class="inscricoes-encerradas"
+                 aria-labelledby="tituloInscricoesEncerradas">
 
-            <span class="encerradas-destaque">Resultado oficial • 16/10/2026</span>
+            <div class="inscricoes-encerradas__icone">
+                🔬
+            </div>
+
+            <span class="encerradas-destaque">
+                II ABCiências realizada com sucesso
+            </span>
 
             <h2 id="tituloInscricoesEncerradas">
-                52 projetos aprovados na II ABCiências!
+                52 projetos fizeram parte da edição 2026
             </h2>
 
             <p>
-                O período de inscrições para a <strong>II Mostra ABCCEL de Ciências — ABCiências 2026</strong>
-                foi encerrado em <strong>02 de outubro de 2026</strong>.
+                A Comissão Organizadora agradece a todas as escolas,
+                estudantes, professores orientadores, coorientadores,
+                gestores e parceiros que participaram do processo de inscrição
+                e contribuíram para a realização da II ABCiências.
             </p>
 
-            <p>
-                A Comissão Organizadora agradece a todas as escolas, estudantes, professores orientadores
-                e coorientadores que enviaram seus projetos e contribuíram para mais uma edição da nossa Mostra.
-            </p>
 
-            <div class="conquista-edicao" role="note">
-                <strong>Uma conquista que merece ser celebrada!</strong>
+            <div class="conquista-edicao"
+                 role="note">
+
+                <strong>
+                    Uma edição que ampliou o alcance da ABCiências
+                </strong>
+
                 <p>
-                    É com muita alegria que celebramos os resultados da II ABCiências!
-                    Nesta edição, superamos os números da edição anterior,
-                    demonstrando o crescimento da Mostra e o fortalecimento da ciência
-                    desenvolvida nas nossas escolas. Agradecemos a cada estudante,
-                    professor e instituição que faz parte dessa história.
+                    Em 2026, a Mostra reuniu <strong>52 projetos</strong>,
+                    <strong>16 escolas</strong>, representantes de
+                    <strong>5 municípios</strong> e
+                    <strong>151 participantes</strong>,
+                    fortalecendo a ciência desenvolvida nas escolas
+                    e ampliando a participação regional da ABCiências.
                 </p>
+
             </div>
+
+
+            <div class="resumo-edicao">
+
+                <h3>
+                    Histórico da edição 2026
+                </h3>
+
+                <p>
+                    <strong>27/08/2026</strong> —
+                    Lançamento do edital e início das inscrições.
+                </p>
+
+                <p>
+                    <strong>02/10/2026</strong> —
+                    Encerramento das inscrições.
+                </p>
+
+                <p>
+                    <strong>14/10/2026</strong> —
+                    Divulgação do resultado preliminar.
+                </p>
+
+                <p>
+                    <strong>14 e 15/10/2026</strong> —
+                    Período para interposição de recursos.
+                </p>
+
+                <p>
+                    <strong>16/10/2026</strong> —
+                    Divulgação do resultado oficial,
+                    com 52 projetos aprovados.
+                </p>
+
+                <p>
+                    <strong>03/11/2026</strong> —
+                    Realização da II ABCiências,
+                    com apresentações, avaliação,
+                    formação e cerimônia de premiação.
+                </p>
+
+            </div>
+
+
+            <div class="credenciais-box">
+
+                <h3>
+                    15 credenciais científicas ofertadas
+                </h3>
+
+                <p>
+                    A edição 2026 também ampliou as oportunidades
+                    para os projetos participantes por meio da oferta
+                    de <strong>15 credenciais para feiras científicas
+                    nacionais e internacionais</strong>.
+                </p>
+
+                <p>
+                    Entre as oportunidades estão credenciais para
+                    EUREKA, Expo La Aurora, FICTIMC, FEBIC,
+                    FECET, MILSET, MCTIA, MOCICA e EXPOCETI.
+                </p>
+
+                <p>
+                    A parceria com a
+                    <strong>Ruta Científica Tecnológica Internacional Escolar</strong>
+                    possibilitou credenciais internacionais para eventos
+                    no Peru, Paraguai e Colômbia.
+                </p>
+
+            </div>
+
 
             <p>
-                Após a análise dos recursos, a Comissão Organizadora divulga o
-                <strong>resultado oficial, em 16 de outubro de 2026, com 52 projetos aprovados</strong>.
-                Parabenizamos todas as equipes participantes!
+                O resultado oficial da edição permanece disponível
+                para consulta, assim como os registros fotográficos
+                e documentos da II ABCiências.
             </p>
 
-            <div class="cronograma-proximas-etapas">
-
-                <h3>Etapas da seleção e realização da Mostra</h3>
-
-                <p><strong>14/10/2026</strong> — Divulgação do resultado preliminar.</p>
-                <p><strong>14 e 15/10/2026</strong> — Período para interposição de recursos.</p>
-                <p><strong>16/10/2026</strong> — Resultado oficial divulgado após análise dos recursos: 52 projetos aprovados.</p>
-                <p><strong>03/11/2026</strong> — Realização da II ABCiências 2026.</p>
-
-            </div>
 
             <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:24px;">
 
@@ -570,36 +415,51 @@
                    target="_blank"
                    rel="noopener noreferrer">
 
-                    Consultar resultado oficial (PDF)
+                    Consultar resultado oficial
 
                 </a>
 
                 <a class="botao botao--secundario"
-                   href="../documentos/Retificacao_02_Edital_01_2026_ABCiencias.pdf"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                   href="galeria.html">
 
-                    Ver Retificação nº 02
+                    Ver galeria 2026
 
                 </a>
 
                 <a class="botao botao--secundario"
-                   href="cronograma.html">
+                   href="edicoes.html">
 
-                    Ver cronograma atualizado
+                    Ver edição 2026
+
+                </a>
+
+                <a class="botao botao--secundario"
+                   href="edital.html">
+
+                    Documentos da edição
 
                 </a>
 
             </div>
 
+
             <p>
-                Acompanhe as atualizações pelo Portal ABCiências e pelo Instagram
+                Acompanhe as novidades sobre as próximas edições
+                pelo Portal ABCiências e pelo Instagram
                 <strong>@abci.encias</strong>.
             </p>
+
 
             <p class="encerradas-final">
                 Obrigado por fazer parte da II ABCiências 2026.<br>
                 Ciência que inspira hoje, transforma amanhã.
+            </p>
+
+
+            <p>
+                <strong>
+                    III ABCiências — em breve.
+                </strong>
             </p>
 
         </section>
@@ -607,7 +467,6 @@
     </div>
 
 </main>
-
 
 
 <footer class="rodape">
@@ -623,11 +482,12 @@
             <p>
                 Mostra ABCCEL de Ciências da Educação Básica.
                 Um espaço para investigar, criar,
-                apresentar e valorizar a ciência
-                feita por estudantes.
+                compartilhar conhecimentos e valorizar
+                a ciência feita por estudantes.
             </p>
 
         </div>
+
 
         <div>
 
@@ -635,23 +495,26 @@
                 Links rápidos
             </strong>
 
-            <a href="edital.html">
-                Edital 2026
+            <a href="edicoes.html">
+                Edições
             </a>
 
-            <a href="inscricoes.html">
-                Inscrições
-            </a>
-
-            <a href="edicao-2025.html">
-                Edição 2025
+            <a href="../documentos/Resultado_Oficial_ABCiencias_2026.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                Resultado 2026
             </a>
 
             <a href="galeria.html">
                 Galeria
             </a>
 
+            <a href="edital.html">
+                Documentos 2026
+            </a>
+
         </div>
+
 
         <div>
 
@@ -691,9 +554,7 @@
 </footer>
 
 
-
 <script src="../js/script.js"></script>
-
 
 
 </body>

@@ -1,642 +1,511 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Memória da ABCiências — registros históricos, fotografias e momentos das edições da Mostra ABCCEL de Ciências.">
-
-    <title>Galeria | Portal ABCiências</title>
-
-    <link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Galeria da II ABCiências 2026 — registros da Mostra ABCCEL de Ciências.">
+<title>Galeria | Portal ABCiências</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.album-secao{margin:42px 0;padding:28px;background:#fff;border-radius:20px;box-shadow:0 8px 28px rgba(0,0,0,.07)}
+.album-cabecalho{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:22px;flex-wrap:wrap}
+.album-cabecalho h2{margin:8px 0 0}
+.album-contagem{font-weight:800;color:#1455d9;background:#eef5ff;border-radius:999px;padding:8px 14px}
+.galeria-2026{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:14px}
+.foto-galeria{border:0;padding:0;background:#eef2f7;border-radius:12px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;box-shadow:0 3px 10px rgba(0,0,0,.08);transition:.2s}
+.foto-galeria:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+.foto-galeria img{width:100%;height:100%;display:block;object-fit:cover}
+.lightbox{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(4,12,28,.94);padding:28px 70px}
+.lightbox.aberto{display:flex}
+.lightbox__imagem{max-width:min(1180px,92vw);max-height:88vh;width:auto;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 12px 45px rgba(0,0,0,.5)}
+.lightbox__fechar,.lightbox__anterior,.lightbox__proximo{position:absolute;border:0;color:#fff;background:rgba(255,255,255,.13);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lightbox__fechar{top:18px;right:22px;width:48px;height:48px;border-radius:50%;font-size:30px}
+.lightbox__anterior,.lightbox__proximo{top:50%;transform:translateY(-50%);width:52px;height:74px;border-radius:12px;font-size:38px}
+.lightbox__anterior{left:15px} .lightbox__proximo{right:15px}
+.lightbox__contador{position:absolute;left:50%;bottom:15px;transform:translateX(-50%);color:#fff;font-weight:700;background:rgba(0,0,0,.35);padding:7px 13px;border-radius:999px}
+@media(max-width:700px){.album-secao{padding:20px 14px}.galeria-2026{grid-template-columns:repeat(2,1fr);gap:10px}.lightbox{padding:55px 12px}.lightbox__imagem{max-width:96vw;max-height:78vh}}
+</style>
 </head>
-
 <body>
 
 <header class="topo" id="topo">
-    <div class="container topo__conteudo">
-
-        <a class="marca" href="../index.html">
-            <img src="../imagens/logo-abciencias.png" alt="Logomarca ABCiências">
-
-            <div>
-                <strong>ABCiências</strong>
-                <span>Mostra ABCCEL de Ciências</span>
-            </div>
-        </a>
-
-        <button class="menu-botao"
-                aria-label="Abrir menu"
-                aria-expanded="false">
-            ☰
-        </button>
-
-        <nav class="menu">
-            <a href="../index.html">Início</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="edicoes.html">Edições</a>
-            <a href="cronograma.html">Cronograma</a>
-            <a href="edital.html">Edital</a>
-            <a href="inscricoes.html">Inscrições</a>
-            <a href="galeria.html">Galeria</a>
-            <a href="contato.html">Contato</a>
-            <a class="menu-destaque" href="avaliadores.html">Área do Avaliador</a>
-        </nav>
-
-    </div>
+<div class="container topo__conteudo">
+<a class="marca" href="../index.html" aria-label="Página inicial do Portal ABCiências">
+<img src="../imagens/logo-abciencias.png" alt="Logomarca ABCiências">
+<div><strong>ABCiências</strong><span>Mostra ABCCEL de Ciências</span></div>
+</a>
+<button class="menu-botao" aria-label="Abrir menu" aria-expanded="false">☰</button>
+<nav class="menu">
+<a href="../index.html">Início</a><a href="sobre.html">Sobre</a><a href="edicoes.html">Edições</a>
+<a href="cronograma.html">Cronograma</a><a href="edital.html">Edital</a><a href="inscricoes.html">Inscrições</a>
+<a href="galeria.html">Galeria</a><a href="contato.html">Contato</a>
+<a class="menu-destaque" href="avaliadores.html">Área do Avaliador</a>
+</nav>
+</div>
 </header>
 
-
 <main>
+<section class="pagina-hero"><div class="container">
+<span class="etiqueta">Memória da ABCiências</span>
+<h1>Galeria das edições</h1>
+<p>Registros que preservam os encontros, apresentações, descobertas e conquistas que fazem parte da história da ABCiências.</p>
+</div></section>
 
-<section class="pagina-hero">
-    <div class="container">
+<section class="conteudo-pagina"><div class="container">
+<div class="bloco">
+<span class="tag">II ABCiências — 2026</span>
+<h2>Um dia de ciência, participação e protagonismo</h2>
+<p>A II ABCiências foi realizada em <strong>03 de novembro de 2026</strong>, na EEEP Júlio França, em Bela Cruz – CE.</p>
+<p>A edição reuniu <strong>52 projetos</strong>, <strong>16 escolas</strong>, representantes de <strong>5 municípios</strong> e <strong>151 participantes</strong>.</p>
+<p>Clique em qualquer fotografia para visualizá-la em tamanho maior. Use as setas para navegar entre os registros ou pressione <strong>Esc</strong> para fechar.</p>
+</div>
 
-        <span class="etiqueta">
-            Memória da ABCiências
-        </span>
 
-        <h1>
-            Galeria das edições
-        </h1>
-
-        <p>
-            Fotografias e registros que preservam a história
-            da Mostra ABCCEL de Ciências e das pessoas que ajudam
-            a construir cada edição.
-        </p>
-
-    </div>
+<section class="album-secao">
+<div class="album-cabecalho">
+<div><span class="tag">II ABCiências 2026</span><h2>Credenciamento e montagem dos expositores</h2></div>
+<span class="album-contagem">9 fotos</span>
+</div>
+<div class="galeria-2026">
+<button class="foto-galeria" type="button" data-src="../imagens/2026/credenciamento/credenciamento-01.jpg" aria-label="Ampliar Credenciamento e montagem dos expositores — foto 01">
+<img src="../imagens/2026/credenciamento/credenciamento-01.jpg" alt="Credenciamento e montagem dos expositores — foto 01" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/credenciamento/credenciamento-02.jpg" aria-label="Ampliar Credenciamento e montagem dos expositores — foto 02">
+<img src="../imagens/2026/credenciamento/credenciamento-02.jpg" alt="Credenciamento e montagem dos expositores — foto 02" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/credenciamento/credenciamento-03.jpg" aria-label="Ampliar Credenciamento e montagem dos expositores — foto 03">
+<img src="../imagens/2026/credenciamento/credenciamento-03.jpg" alt="Credenciamento e montagem dos expositores — foto 03" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/credenciamento/credenciamento-04.jpg" aria-label="Ampliar Credenciamento e montagem dos expositores — foto 04">
+<img src="../imagens/2026/credenciamento/credenciamento-04.jpg" alt="Credenciamento e montagem dos expositores — foto 04" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/credenciamento/credenciamento-05.jpg" aria-label="Ampliar Credenciamento e montagem dos expositores — foto 05">
+<img src="../imagens/2026/credenciamento/credenciamento-05.jpg" alt="Credenciamento e montagem dos expositores — foto 05" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/credenciamento/credenciamento-06.jpg" aria-label="Ampliar Credenciamento e montagem dos expositores — foto 06">
+<img src="../imagens/2026/credenciamento/credenciamento-06.jpg" alt="Credenciamento e montagem dos expositores — foto 06" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/credenciamento/credenciamento-07.jpg" aria-label="Ampliar Credenciamento e montagem dos expositores — foto 07">
+<img src="../imagens/2026/credenciamento/credenciamento-07.jpg" alt="Credenciamento e montagem dos expositores — foto 07" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/credenciamento/credenciamento-08.jpg" aria-label="Ampliar Credenciamento e montagem dos expositores — foto 08">
+<img src="../imagens/2026/credenciamento/credenciamento-08.jpg" alt="Credenciamento e montagem dos expositores — foto 08" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/credenciamento/credenciamento-09.jpg" aria-label="Ampliar Credenciamento e montagem dos expositores — foto 09">
+<img src="../imagens/2026/credenciamento/credenciamento-09.jpg" alt="Credenciamento e montagem dos expositores — foto 09" loading="lazy">
+</button>
+</div>
+</section>
+<section class="album-secao">
+<div class="album-cabecalho">
+<div><span class="tag">II ABCiências 2026</span><h2>Cerimônia de abertura</h2></div>
+<span class="album-contagem">18 fotos</span>
+</div>
+<div class="galeria-2026">
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-01.jpg" aria-label="Ampliar Cerimônia de abertura — foto 01">
+<img src="../imagens/2026/cerimonia-abertura/abertura-01.jpg" alt="Cerimônia de abertura — foto 01" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-02.jpg" aria-label="Ampliar Cerimônia de abertura — foto 02">
+<img src="../imagens/2026/cerimonia-abertura/abertura-02.jpg" alt="Cerimônia de abertura — foto 02" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-03.jpg" aria-label="Ampliar Cerimônia de abertura — foto 03">
+<img src="../imagens/2026/cerimonia-abertura/abertura-03.jpg" alt="Cerimônia de abertura — foto 03" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-04.jpg" aria-label="Ampliar Cerimônia de abertura — foto 04">
+<img src="../imagens/2026/cerimonia-abertura/abertura-04.jpg" alt="Cerimônia de abertura — foto 04" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-05.jpg" aria-label="Ampliar Cerimônia de abertura — foto 05">
+<img src="../imagens/2026/cerimonia-abertura/abertura-05.jpg" alt="Cerimônia de abertura — foto 05" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-06.jpg" aria-label="Ampliar Cerimônia de abertura — foto 06">
+<img src="../imagens/2026/cerimonia-abertura/abertura-06.jpg" alt="Cerimônia de abertura — foto 06" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-07.jpg" aria-label="Ampliar Cerimônia de abertura — foto 07">
+<img src="../imagens/2026/cerimonia-abertura/abertura-07.jpg" alt="Cerimônia de abertura — foto 07" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-08.jpg" aria-label="Ampliar Cerimônia de abertura — foto 08">
+<img src="../imagens/2026/cerimonia-abertura/abertura-08.jpg" alt="Cerimônia de abertura — foto 08" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-09.jpg" aria-label="Ampliar Cerimônia de abertura — foto 09">
+<img src="../imagens/2026/cerimonia-abertura/abertura-09.jpg" alt="Cerimônia de abertura — foto 09" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-10.jpg" aria-label="Ampliar Cerimônia de abertura — foto 10">
+<img src="../imagens/2026/cerimonia-abertura/abertura-10.jpg" alt="Cerimônia de abertura — foto 10" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-11.jpg" aria-label="Ampliar Cerimônia de abertura — foto 11">
+<img src="../imagens/2026/cerimonia-abertura/abertura-11.jpg" alt="Cerimônia de abertura — foto 11" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-12.jpg" aria-label="Ampliar Cerimônia de abertura — foto 12">
+<img src="../imagens/2026/cerimonia-abertura/abertura-12.jpg" alt="Cerimônia de abertura — foto 12" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-13.jpg" aria-label="Ampliar Cerimônia de abertura — foto 13">
+<img src="../imagens/2026/cerimonia-abertura/abertura-13.jpg" alt="Cerimônia de abertura — foto 13" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-14.jpg" aria-label="Ampliar Cerimônia de abertura — foto 14">
+<img src="../imagens/2026/cerimonia-abertura/abertura-14.jpg" alt="Cerimônia de abertura — foto 14" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-15.jpg" aria-label="Ampliar Cerimônia de abertura — foto 15">
+<img src="../imagens/2026/cerimonia-abertura/abertura-15.jpg" alt="Cerimônia de abertura — foto 15" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-16.jpg" aria-label="Ampliar Cerimônia de abertura — foto 16">
+<img src="../imagens/2026/cerimonia-abertura/abertura-16.jpg" alt="Cerimônia de abertura — foto 16" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-17.jpg" aria-label="Ampliar Cerimônia de abertura — foto 17">
+<img src="../imagens/2026/cerimonia-abertura/abertura-17.jpg" alt="Cerimônia de abertura — foto 17" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/cerimonia-abertura/abertura-18.jpg" aria-label="Ampliar Cerimônia de abertura — foto 18">
+<img src="../imagens/2026/cerimonia-abertura/abertura-18.jpg" alt="Cerimônia de abertura — foto 18" loading="lazy">
+</button>
+</div>
+</section>
+<section class="album-secao">
+<div class="album-cabecalho">
+<div><span class="tag">II ABCiências 2026</span><h2>Apresentação dos trabalhos</h2></div>
+<span class="album-contagem">25 fotos</span>
+</div>
+<div class="galeria-2026">
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-01.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 01">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-01.jpg" alt="Apresentação dos trabalhos — foto 01" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-02.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 02">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-02.jpg" alt="Apresentação dos trabalhos — foto 02" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-03.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 03">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-03.jpg" alt="Apresentação dos trabalhos — foto 03" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-04.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 04">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-04.jpg" alt="Apresentação dos trabalhos — foto 04" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-05.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 05">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-05.jpg" alt="Apresentação dos trabalhos — foto 05" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-06.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 06">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-06.jpg" alt="Apresentação dos trabalhos — foto 06" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-07.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 07">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-07.jpg" alt="Apresentação dos trabalhos — foto 07" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-08.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 08">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-08.jpg" alt="Apresentação dos trabalhos — foto 08" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-09.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 09">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-09.jpg" alt="Apresentação dos trabalhos — foto 09" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-10.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 10">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-10.jpg" alt="Apresentação dos trabalhos — foto 10" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-11.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 11">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-11.jpg" alt="Apresentação dos trabalhos — foto 11" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-12.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 12">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-12.jpg" alt="Apresentação dos trabalhos — foto 12" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-13.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 13">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-13.jpg" alt="Apresentação dos trabalhos — foto 13" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-14.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 14">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-14.jpg" alt="Apresentação dos trabalhos — foto 14" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-15.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 15">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-15.jpg" alt="Apresentação dos trabalhos — foto 15" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-16.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 16">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-16.jpg" alt="Apresentação dos trabalhos — foto 16" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-17.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 17">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-17.jpg" alt="Apresentação dos trabalhos — foto 17" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-18.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 18">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-18.jpg" alt="Apresentação dos trabalhos — foto 18" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-19.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 19">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-19.jpg" alt="Apresentação dos trabalhos — foto 19" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-20.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 20">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-20.jpg" alt="Apresentação dos trabalhos — foto 20" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-21.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 21">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-21.jpg" alt="Apresentação dos trabalhos — foto 21" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-22.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 22">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-22.jpg" alt="Apresentação dos trabalhos — foto 22" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-23.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 23">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-23.jpg" alt="Apresentação dos trabalhos — foto 23" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-24.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 24">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-24.jpg" alt="Apresentação dos trabalhos — foto 24" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-25.jpg" aria-label="Ampliar Apresentação dos trabalhos — foto 25">
+<img src="../imagens/2026/apresentacao-trabalhos/apresentacao trabalhos-25.jpg" alt="Apresentação dos trabalhos — foto 25" loading="lazy">
+</button>
+</div>
+</section>
+<section class="album-secao">
+<div class="album-cabecalho">
+<div><span class="tag">II ABCiências 2026</span><h2>Formação com orientadores</h2></div>
+<span class="album-contagem">7 fotos</span>
+</div>
+<div class="galeria-2026">
+<button class="foto-galeria" type="button" data-src="../imagens/2026/formacao/formacao-01.jpg" aria-label="Ampliar Formação com orientadores — foto 01">
+<img src="../imagens/2026/formacao/formacao-01.jpg" alt="Formação com orientadores — foto 01" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/formacao/formacao-02.jpg" aria-label="Ampliar Formação com orientadores — foto 02">
+<img src="../imagens/2026/formacao/formacao-02.jpg" alt="Formação com orientadores — foto 02" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/formacao/formacao-03.jpg" aria-label="Ampliar Formação com orientadores — foto 03">
+<img src="../imagens/2026/formacao/formacao-03.jpg" alt="Formação com orientadores — foto 03" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/formacao/formacao-04.jpg" aria-label="Ampliar Formação com orientadores — foto 04">
+<img src="../imagens/2026/formacao/formacao-04.jpg" alt="Formação com orientadores — foto 04" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/formacao/formacao-05.jpg" aria-label="Ampliar Formação com orientadores — foto 05">
+<img src="../imagens/2026/formacao/formacao-05.jpg" alt="Formação com orientadores — foto 05" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/formacao/formacao-06.jpg" aria-label="Ampliar Formação com orientadores — foto 06">
+<img src="../imagens/2026/formacao/formacao-06.jpg" alt="Formação com orientadores — foto 06" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/formacao/formacao-07.jpg" aria-label="Ampliar Formação com orientadores — foto 07">
+<img src="../imagens/2026/formacao/formacao-07.jpg" alt="Formação com orientadores — foto 07" loading="lazy">
+</button>
+</div>
+</section>
+<section class="album-secao">
+<div class="album-cabecalho">
+<div><span class="tag">II ABCiências 2026</span><h2>Cerimônia de premiação</h2></div>
+<span class="album-contagem">60 fotos</span>
+</div>
+<div class="galeria-2026">
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-01.jpg" aria-label="Ampliar Cerimônia de premiação — foto 01">
+<img src="../imagens/2026/premiacao/premiacao-01.jpg" alt="Cerimônia de premiação — foto 01" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-02.jpg" aria-label="Ampliar Cerimônia de premiação — foto 02">
+<img src="../imagens/2026/premiacao/premiacao-02.jpg" alt="Cerimônia de premiação — foto 02" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-03.jpg" aria-label="Ampliar Cerimônia de premiação — foto 03">
+<img src="../imagens/2026/premiacao/premiacao-03.jpg" alt="Cerimônia de premiação — foto 03" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-04.jpg" aria-label="Ampliar Cerimônia de premiação — foto 04">
+<img src="../imagens/2026/premiacao/premiacao-04.jpg" alt="Cerimônia de premiação — foto 04" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-05.jpg" aria-label="Ampliar Cerimônia de premiação — foto 05">
+<img src="../imagens/2026/premiacao/premiacao-05.jpg" alt="Cerimônia de premiação — foto 05" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-06.jpg" aria-label="Ampliar Cerimônia de premiação — foto 06">
+<img src="../imagens/2026/premiacao/premiacao-06.jpg" alt="Cerimônia de premiação — foto 06" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-07.jpg" aria-label="Ampliar Cerimônia de premiação — foto 07">
+<img src="../imagens/2026/premiacao/premiacao-07.jpg" alt="Cerimônia de premiação — foto 07" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-08.jpg" aria-label="Ampliar Cerimônia de premiação — foto 08">
+<img src="../imagens/2026/premiacao/premiacao-08.jpg" alt="Cerimônia de premiação — foto 08" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-09.jpg" aria-label="Ampliar Cerimônia de premiação — foto 09">
+<img src="../imagens/2026/premiacao/premiacao-09.jpg" alt="Cerimônia de premiação — foto 09" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-10.jpg" aria-label="Ampliar Cerimônia de premiação — foto 10">
+<img src="../imagens/2026/premiacao/premiacao-10.jpg" alt="Cerimônia de premiação — foto 10" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-11.jpg" aria-label="Ampliar Cerimônia de premiação — foto 11">
+<img src="../imagens/2026/premiacao/premiacao-11.jpg" alt="Cerimônia de premiação — foto 11" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-12.jpg" aria-label="Ampliar Cerimônia de premiação — foto 12">
+<img src="../imagens/2026/premiacao/premiacao-12.jpg" alt="Cerimônia de premiação — foto 12" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-13.jpg" aria-label="Ampliar Cerimônia de premiação — foto 13">
+<img src="../imagens/2026/premiacao/premiacao-13.jpg" alt="Cerimônia de premiação — foto 13" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-14.jpg" aria-label="Ampliar Cerimônia de premiação — foto 14">
+<img src="../imagens/2026/premiacao/premiacao-14.jpg" alt="Cerimônia de premiação — foto 14" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-15.jpg" aria-label="Ampliar Cerimônia de premiação — foto 15">
+<img src="../imagens/2026/premiacao/premiacao-15.jpg" alt="Cerimônia de premiação — foto 15" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-16.jpg" aria-label="Ampliar Cerimônia de premiação — foto 16">
+<img src="../imagens/2026/premiacao/premiacao-16.jpg" alt="Cerimônia de premiação — foto 16" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-17.jpg" aria-label="Ampliar Cerimônia de premiação — foto 17">
+<img src="../imagens/2026/premiacao/premiacao-17.jpg" alt="Cerimônia de premiação — foto 17" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-18.jpg" aria-label="Ampliar Cerimônia de premiação — foto 18">
+<img src="../imagens/2026/premiacao/premiacao-18.jpg" alt="Cerimônia de premiação — foto 18" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-19.jpg" aria-label="Ampliar Cerimônia de premiação — foto 19">
+<img src="../imagens/2026/premiacao/premiacao-19.jpg" alt="Cerimônia de premiação — foto 19" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-20.jpg" aria-label="Ampliar Cerimônia de premiação — foto 20">
+<img src="../imagens/2026/premiacao/premiacao-20.jpg" alt="Cerimônia de premiação — foto 20" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-21.jpg" aria-label="Ampliar Cerimônia de premiação — foto 21">
+<img src="../imagens/2026/premiacao/premiacao-21.jpg" alt="Cerimônia de premiação — foto 21" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-22.jpg" aria-label="Ampliar Cerimônia de premiação — foto 22">
+<img src="../imagens/2026/premiacao/premiacao-22.jpg" alt="Cerimônia de premiação — foto 22" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-23.jpg" aria-label="Ampliar Cerimônia de premiação — foto 23">
+<img src="../imagens/2026/premiacao/premiacao-23.jpg" alt="Cerimônia de premiação — foto 23" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-24.jpg" aria-label="Ampliar Cerimônia de premiação — foto 24">
+<img src="../imagens/2026/premiacao/premiacao-24.jpg" alt="Cerimônia de premiação — foto 24" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-25.jpg" aria-label="Ampliar Cerimônia de premiação — foto 25">
+<img src="../imagens/2026/premiacao/premiacao-25.jpg" alt="Cerimônia de premiação — foto 25" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-26.jpg" aria-label="Ampliar Cerimônia de premiação — foto 26">
+<img src="../imagens/2026/premiacao/premiacao-26.jpg" alt="Cerimônia de premiação — foto 26" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-27.jpg" aria-label="Ampliar Cerimônia de premiação — foto 27">
+<img src="../imagens/2026/premiacao/premiacao-27.jpg" alt="Cerimônia de premiação — foto 27" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-28.jpg" aria-label="Ampliar Cerimônia de premiação — foto 28">
+<img src="../imagens/2026/premiacao/premiacao-28.jpg" alt="Cerimônia de premiação — foto 28" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-29.jpg" aria-label="Ampliar Cerimônia de premiação — foto 29">
+<img src="../imagens/2026/premiacao/premiacao-29.jpg" alt="Cerimônia de premiação — foto 29" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-30.jpg" aria-label="Ampliar Cerimônia de premiação — foto 30">
+<img src="../imagens/2026/premiacao/premiacao-30.jpg" alt="Cerimônia de premiação — foto 30" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-31.jpg" aria-label="Ampliar Cerimônia de premiação — foto 31">
+<img src="../imagens/2026/premiacao/premiacao-31.jpg" alt="Cerimônia de premiação — foto 31" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-32.jpg" aria-label="Ampliar Cerimônia de premiação — foto 32">
+<img src="../imagens/2026/premiacao/premiacao-32.jpg" alt="Cerimônia de premiação — foto 32" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-33.jpg" aria-label="Ampliar Cerimônia de premiação — foto 33">
+<img src="../imagens/2026/premiacao/premiacao-33.jpg" alt="Cerimônia de premiação — foto 33" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-34.jpg" aria-label="Ampliar Cerimônia de premiação — foto 34">
+<img src="../imagens/2026/premiacao/premiacao-34.jpg" alt="Cerimônia de premiação — foto 34" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-35.jpg" aria-label="Ampliar Cerimônia de premiação — foto 35">
+<img src="../imagens/2026/premiacao/premiacao-35.jpg" alt="Cerimônia de premiação — foto 35" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-36.jpg" aria-label="Ampliar Cerimônia de premiação — foto 36">
+<img src="../imagens/2026/premiacao/premiacao-36.jpg" alt="Cerimônia de premiação — foto 36" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-37.jpg" aria-label="Ampliar Cerimônia de premiação — foto 37">
+<img src="../imagens/2026/premiacao/premiacao-37.jpg" alt="Cerimônia de premiação — foto 37" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-38.jpg" aria-label="Ampliar Cerimônia de premiação — foto 38">
+<img src="../imagens/2026/premiacao/premiacao-38.jpg" alt="Cerimônia de premiação — foto 38" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-39.jpg" aria-label="Ampliar Cerimônia de premiação — foto 39">
+<img src="../imagens/2026/premiacao/premiacao-39.jpg" alt="Cerimônia de premiação — foto 39" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-40.jpg" aria-label="Ampliar Cerimônia de premiação — foto 40">
+<img src="../imagens/2026/premiacao/premiacao-40.jpg" alt="Cerimônia de premiação — foto 40" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-41.jpg" aria-label="Ampliar Cerimônia de premiação — foto 41">
+<img src="../imagens/2026/premiacao/premiacao-41.jpg" alt="Cerimônia de premiação — foto 41" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-42.jpg" aria-label="Ampliar Cerimônia de premiação — foto 42">
+<img src="../imagens/2026/premiacao/premiacao-42.jpg" alt="Cerimônia de premiação — foto 42" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-43.jpg" aria-label="Ampliar Cerimônia de premiação — foto 43">
+<img src="../imagens/2026/premiacao/premiacao-43.jpg" alt="Cerimônia de premiação — foto 43" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-44.jpg" aria-label="Ampliar Cerimônia de premiação — foto 44">
+<img src="../imagens/2026/premiacao/premiacao-44.jpg" alt="Cerimônia de premiação — foto 44" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-45.jpg" aria-label="Ampliar Cerimônia de premiação — foto 45">
+<img src="../imagens/2026/premiacao/premiacao-45.jpg" alt="Cerimônia de premiação — foto 45" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-46.jpg" aria-label="Ampliar Cerimônia de premiação — foto 46">
+<img src="../imagens/2026/premiacao/premiacao-46.jpg" alt="Cerimônia de premiação — foto 46" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-47.jpg" aria-label="Ampliar Cerimônia de premiação — foto 47">
+<img src="../imagens/2026/premiacao/premiacao-47.jpg" alt="Cerimônia de premiação — foto 47" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-48.jpg" aria-label="Ampliar Cerimônia de premiação — foto 48">
+<img src="../imagens/2026/premiacao/premiacao-48.jpg" alt="Cerimônia de premiação — foto 48" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-49.jpg" aria-label="Ampliar Cerimônia de premiação — foto 49">
+<img src="../imagens/2026/premiacao/premiacao-49.jpg" alt="Cerimônia de premiação — foto 49" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-50.jpg" aria-label="Ampliar Cerimônia de premiação — foto 50">
+<img src="../imagens/2026/premiacao/premiacao-50.jpg" alt="Cerimônia de premiação — foto 50" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-51.jpg" aria-label="Ampliar Cerimônia de premiação — foto 51">
+<img src="../imagens/2026/premiacao/premiacao-51.jpg" alt="Cerimônia de premiação — foto 51" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-52.jpg" aria-label="Ampliar Cerimônia de premiação — foto 52">
+<img src="../imagens/2026/premiacao/premiacao-52.jpg" alt="Cerimônia de premiação — foto 52" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-53.jpg" aria-label="Ampliar Cerimônia de premiação — foto 53">
+<img src="../imagens/2026/premiacao/premiacao-53.jpg" alt="Cerimônia de premiação — foto 53" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-54.jpg" aria-label="Ampliar Cerimônia de premiação — foto 54">
+<img src="../imagens/2026/premiacao/premiacao-54.jpg" alt="Cerimônia de premiação — foto 54" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-55.jpg" aria-label="Ampliar Cerimônia de premiação — foto 55">
+<img src="../imagens/2026/premiacao/premiacao-55.jpg" alt="Cerimônia de premiação — foto 55" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-56.jpg" aria-label="Ampliar Cerimônia de premiação — foto 56">
+<img src="../imagens/2026/premiacao/premiacao-56.jpg" alt="Cerimônia de premiação — foto 56" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-57.jpg" aria-label="Ampliar Cerimônia de premiação — foto 57">
+<img src="../imagens/2026/premiacao/premiacao-57.jpg" alt="Cerimônia de premiação — foto 57" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-58.jpg" aria-label="Ampliar Cerimônia de premiação — foto 58">
+<img src="../imagens/2026/premiacao/premiacao-58.jpg" alt="Cerimônia de premiação — foto 58" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-59.jpg" aria-label="Ampliar Cerimônia de premiação — foto 59">
+<img src="../imagens/2026/premiacao/premiacao-59.jpg" alt="Cerimônia de premiação — foto 59" loading="lazy">
+</button>
+<button class="foto-galeria" type="button" data-src="../imagens/2026/premiacao/premiacao-60.jpg" aria-label="Ampliar Cerimônia de premiação — foto 60">
+<img src="../imagens/2026/premiacao/premiacao-60.jpg" alt="Cerimônia de premiação — foto 60" loading="lazy">
+</button>
+</div>
 </section>
 
-
-<section class="conteudo-pagina">
-
-    <div class="container">
-
-        <div class="bloco">
-
-            <span class="tag">
-                Nossa história
-            </span>
-
-            <h2>
-                Memória da ABCiências
-            </h2>
-
-            <p>
-                Este espaço reúne registros das edições da ABCiências,
-                valorizando estudantes, professores, escolas, avaliadores,
-                parceiros e todos aqueles que fazem parte da trajetória
-                da Mostra ABCCEL de Ciências.
-            </p>
-
-            <p>
-                Cada fotografia representa um pouco das descobertas,
-                encontros, apresentações, aprendizados e conquistas
-                vivenciados ao longo das edições.
-            </p>
-
-        </div>
-
-
-        <div class="bloco">
-
-            <span class="tag">
-                Edição 2026
-            </span>
-
-            <h2>
-                II ABCiências — 03 de novembro de 2026
-            </h2>
-
-            <p>
-                Depois de meses de planejamento, a II ABCiências foi realizada
-                na <strong>EEEP Júlio França</strong>, em Bela Cruz – CE,
-                reunindo estudantes, professores, escolas, avaliadores,
-                parceiros e comunidade.
-            </p>
-
-            <p>
-                A edição contou com <strong>52 projetos</strong>,
-                <strong>16 escolas</strong>, representantes de
-                <strong>5 municípios</strong> e
-                <strong>151 participantes</strong>.
-            </p>
-
-            <p>
-                A programação incluiu cerimônia de abertura,
-                apresentação e avaliação dos projetos,
-                formação para professores, momentos de integração
-                e cerimônia de premiação.
-            </p>
-
-        </div>
-
-
-        <div class="bloco">
-
-            <span class="tag">
-                Cerimônia de abertura
-            </span>
-
-            <h2>
-                O início de um dia dedicado à ciência
-            </h2>
-
-            <p>
-                A abertura oficial reuniu representantes da ABCCEL,
-                estudantes, professores e convidados para marcar
-                o início da programação da II ABCiências.
-            </p>
-
-            <div class="galeria-preview">
-
-                <div class="foto-placeholder">
-                    Abertura 01
-                    <br>
-                    <small>
-                        Substituir por foto da composição da mesa
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Abertura 02
-                    <br>
-                    <small>
-                        Substituir por foto dos hinos
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Abertura 03
-                    <br>
-                    <small>
-                        Substituir por foto das falas
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Abertura 04
-                    <br>
-                    <small>
-                        Substituir por registro geral da abertura
-                    </small>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="bloco">
-
-            <span class="tag">
-                Apresentação dos projetos
-            </span>
-
-            <h2>
-                Ciência, criatividade e protagonismo estudantil
-            </h2>
-
-            <p>
-                Os estudantes apresentaram seus trabalhos,
-                compartilharam resultados, responderam às perguntas
-                dos avaliadores e mostraram a diversidade de temas
-                investigados nas escolas participantes.
-            </p>
-
-            <div class="galeria-preview">
-
-                <div class="foto-placeholder">
-                    Projetos 01
-                    <br>
-                    <small>
-                        Substituir por foto de apresentação
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Projetos 02
-                    <br>
-                    <small>
-                        Substituir por foto de estandes
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Projetos 03
-                    <br>
-                    <small>
-                        Substituir por foto de estudantes
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Projetos 04
-                    <br>
-                    <small>
-                        Substituir por foto de visitação
-                    </small>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="bloco">
-
-            <span class="tag">
-                Avaliação
-            </span>
-
-            <h2>
-                Diálogo e reconhecimento do trabalho científico
-            </h2>
-
-            <p>
-                A avaliação dos projetos foi um momento de diálogo
-                entre estudantes e avaliadores, contribuindo para
-                a valorização das pesquisas apresentadas e para
-                o desenvolvimento científico dos participantes.
-            </p>
-
-            <div class="galeria-preview">
-
-                <div class="foto-placeholder">
-                    Avaliação 01
-                    <br>
-                    <small>
-                        Substituir por foto de avaliadores
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Avaliação 02
-                    <br>
-                    <small>
-                        Substituir por foto de avaliação dos projetos
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Avaliação 03
-                    <br>
-                    <small>
-                        Substituir por foto de diálogo com estudantes
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Avaliação 04
-                    <br>
-                    <small>
-                        Substituir por registro geral
-                    </small>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="bloco">
-
-            <span class="tag">
-                Formação
-            </span>
-
-            <h2>
-                Aprendizagem também para os professores
-            </h2>
-
-            <p>
-                A programação da II ABCiências também contou
-                com momento formativo voltado aos professores,
-                fortalecendo a troca de experiências e a discussão
-                sobre práticas relacionadas à educação científica.
-            </p>
-
-            <div class="galeria-preview">
-
-                <div class="foto-placeholder">
-                    Formação 01
-                    <br>
-                    <small>
-                        Substituir por foto da oficina
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Formação 02
-                    <br>
-                    <small>
-                        Substituir por foto dos professores
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Formação 03
-                    <br>
-                    <small>
-                        Substituir por foto do auditório
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Formação 04
-                    <br>
-                    <small>
-                        Substituir por registro geral
-                    </small>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="bloco">
-
-            <span class="tag">
-                Premiação
-            </span>
-
-            <h2>
-                Celebrando projetos, estudantes e professores
-            </h2>
-
-            <p>
-                A cerimônia de premiação encerrou a II ABCiências
-                reconhecendo o trabalho desenvolvido pelas equipes
-                e celebrando o empenho dos estudantes e professores
-                ao longo de todo o processo de pesquisa.
-            </p>
-
-            <div class="galeria-preview">
-
-                <div class="foto-placeholder">
-                    Premiação 01
-                    <br>
-                    <small>
-                        Substituir por foto da cerimônia
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Premiação 02
-                    <br>
-                    <small>
-                        Substituir por foto dos premiados
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Premiação 03
-                    <br>
-                    <small>
-                        Substituir por foto de medalhas ou troféus
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Premiação 04
-                    <br>
-                    <small>
-                        Substituir por foto coletiva
-                    </small>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="bloco">
-
-            <span class="tag">
-                Bastidores
-            </span>
-
-            <h2>
-                Pessoas e momentos que também fizeram a Mostra acontecer
-            </h2>
-
-            <p>
-                A II ABCiências também foi construída nos bastidores:
-                na organização dos espaços, na recepção das equipes,
-                no trabalho dos colaboradores, nas conversas,
-                nos encontros e em muitos outros momentos
-                que ajudaram a tornar a edição especial.
-            </p>
-
-            <div class="galeria-preview">
-
-                <div class="foto-placeholder">
-                    Bastidores 01
-                    <br>
-                    <small>
-                        Substituir por foto da organização
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Bastidores 02
-                    <br>
-                    <small>
-                        Substituir por foto de colaboradores
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Bastidores 03
-                    <br>
-                    <small>
-                        Substituir por foto de recepção
-                    </small>
-                </div>
-
-                <div class="foto-placeholder">
-                    Bastidores 04
-                    <br>
-                    <small>
-                        Substituir por registro espontâneo
-                    </small>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="bloco">
-
-            <span class="tag">
-                Edição 2025
-            </span>
-
-            <h2>
-                I ABCiências — o início da nossa história
-            </h2>
-
-            <div class="galeria-edicoes">
-
-                <article class="card-edicao">
-
-                    <img src="../imagens/abertura/abertura-01.jpg"
-                         alt="Primeira edição da ABCiências 2025">
-
-                    <div class="card-edicao__conteudo">
-
-                        <span>
-                            Edição 2025
-                        </span>
-
-                        <h3>
-                            Primeira ABCiências
-                        </h3>
-
-                        <p>
-                            A primeira edição reuniu 49 projetos
-                            e marcou o início de uma nova tradição
-                            de incentivo à ciência, à criatividade
-                            e ao protagonismo estudantil em Bela Cruz
-                            e na região.
-                        </p>
-
-                        <a class="botao botao--primario"
-                           href="edicao-2025.html">
-
-                            Ver álbum completo
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-
-        <div class="bloco">
-
-            <span class="tag">
-                Continue acompanhando
-            </span>
-
-            <h2>
-                A ciência continua...
-            </h2>
-
-            <p>
-                Novas fotografias e registros poderão ser adicionados
-                à galeria à medida que a memória da II ABCiências
-                for sendo organizada.
-            </p>
-
-            <p>
-                Acompanhe também o perfil oficial da ABCiências
-                no Instagram para ver mais registros da edição.
-            </p>
-
-            <a class="botao botao--azul"
-               href="https://www.instagram.com/abci.encias?igsh=MWxobHc5eThuZXZkYg=="
-               target="_blank"
-               rel="noopener noreferrer">
-
-                Acompanhar @abci.encias
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
+<div class="bloco">
+<span class="tag">Edição 2025</span>
+<h2>I ABCiências — o início da nossa história</h2>
+<p>A primeira edição da ABCiências marcou o início da trajetória da Mostra ABCCEL de Ciências. Os registros de 2025 permanecem disponíveis em sua página própria.</p>
+<a class="botao botao--azul" href="edicao-2025.html">Ver galeria da edição 2025</a>
+</div>
+</div></section>
 </main>
 
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotografias">
+<button class="lightbox__fechar" id="lightboxFechar" type="button" aria-label="Fechar">×</button>
+<button class="lightbox__anterior" id="lightboxAnterior" type="button" aria-label="Foto anterior">‹</button>
+<img class="lightbox__imagem" id="lightboxImagem" src="" alt="Fotografia ampliada">
+<button class="lightbox__proximo" id="lightboxProximo" type="button" aria-label="Próxima foto">›</button>
+<div class="lightbox__contador" id="lightboxContador"></div>
+</div>
 
 <footer class="rodape">
-
-    <div class="container rodape__grid">
-
-        <div>
-            <strong>
-                Portal ABCiências
-            </strong>
-
-            <p>
-                Mostra ABCCEL de Ciências da Educação Básica.
-                Um espaço para investigar, criar,
-                compartilhar conhecimentos e valorizar
-                a ciência feita por estudantes.
-            </p>
-        </div>
-
-
-        <div>
-            <strong>
-                Links rápidos
-            </strong>
-
-            <a href="edicoes.html">
-                Edições
-            </a>
-
-            <a href="../documentos/Resultado_Oficial_ABCiencias_2026.pdf"
-               target="_blank"
-               rel="noopener noreferrer">
-                Resultado 2026
-            </a>
-
-            <a href="galeria.html">
-                Galeria
-            </a>
-
-            <a href="edital.html">
-                Documentos 2026
-            </a>
-        </div>
-
-
-        <div>
-            <strong>
-                Contato
-            </strong>
-
-            <a href="mailto:abciencias2025@gmail.com">
-                abciencias2025@gmail.com
-            </a>
-
-            <a href="contato.html">
-                Fale com a comissão
-            </a>
-
-            <a href="https://www.instagram.com/abci.encias?igsh=MWxobHc5eThuZXZkYg=="
-               target="_blank"
-               rel="noopener noreferrer">
-
-                📷 @abci.encias
-
-            </a>
-        </div>
-
-    </div>
-
-
-    <div class="rodape__base">
-        © 2026 ABCiências —
-        Academia Belacruzense de Cultura, Ciências, Estudos e Letras.
-    </div>
-
+<div class="container rodape__grid">
+<div><strong>Portal ABCiências</strong><p>Mostra ABCCEL de Ciências da Educação Básica. Um espaço para investigar, criar, compartilhar conhecimentos e valorizar a ciência feita por estudantes.</p></div>
+<div><strong>Links rápidos</strong><a href="edicoes.html">Edições</a><a href="../documentos/Resultado_Oficial_ABCiencias_2026.pdf" target="_blank" rel="noopener noreferrer">Resultado 2026</a><a href="galeria.html">Galeria</a><a href="edital.html">Documentos 2026</a></div>
+<div><strong>Contato</strong><a href="mailto:abciencias2025@gmail.com">abciencias2025@gmail.com</a><a href="contato.html">Fale com a comissão</a><a href="https://www.instagram.com/abci.encias?igsh=MWxobHc5eThuZXZkYg==" target="_blank" rel="noopener noreferrer">📷 @abci.encias</a></div>
+</div>
+<div class="rodape__base">© 2026 ABCiências — Academia Belacruzense de Cultura, Ciências, Estudos e Letras.</div>
 </footer>
 
-
 <script src="../js/script.js"></script>
-
+<script>
+(function(){
+const botoes=Array.from(document.querySelectorAll('.foto-galeria'));
+const lightbox=document.getElementById('lightbox');
+const imagem=document.getElementById('lightboxImagem');
+const contador=document.getElementById('lightboxContador');
+let atual=0;
+function mostrar(i){atual=(i+botoes.length)%botoes.length;const b=botoes[atual],img=b.querySelector('img');imagem.src=b.dataset.src;imagem.alt=img.alt;contador.textContent=(atual+1)+' / '+botoes.length;}
+function abrir(i){mostrar(i);lightbox.classList.add('aberto');document.body.style.overflow='hidden';}
+function fechar(){lightbox.classList.remove('aberto');document.body.style.overflow='';imagem.src='';}
+botoes.forEach((b,i)=>b.addEventListener('click',()=>abrir(i)));
+document.getElementById('lightboxFechar').addEventListener('click',fechar);
+document.getElementById('lightboxAnterior').addEventListener('click',()=>mostrar(atual-1));
+document.getElementById('lightboxProximo').addEventListener('click',()=>mostrar(atual+1));
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)fechar();});
+document.addEventListener('keydown',e=>{if(!lightbox.classList.contains('aberto'))return;if(e.key==='Escape')fechar();if(e.key==='ArrowLeft')mostrar(atual-1);if(e.key==='ArrowRight')mostrar(atual+1);});
+})();
+</script>
 </body>
 </html>

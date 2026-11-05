@@ -18,6 +18,111 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../css/style.css">
+
+<style>
+.galeria-2025{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(155px,1fr));
+    gap:14px;
+    margin:18px 0 34px;
+}
+.galeria-2025 .foto-2025{
+    border:0;
+    padding:0;
+    margin:0;
+    background:#eef2f7;
+    border-radius:12px;
+    overflow:hidden;
+    cursor:pointer;
+    aspect-ratio:4/3;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    transition:transform .2s ease, box-shadow .2s ease;
+}
+.galeria-2025 .foto-2025:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+.galeria-2025 .foto-2025 img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+.lightbox-2025{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    background:rgba(4,12,28,.94);
+    padding:28px 70px;
+}
+.lightbox-2025.aberto{display:flex;}
+.lightbox-2025__imagem{
+    max-width:min(1180px,92vw);
+    max-height:88vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    border-radius:8px;
+    box-shadow:0 12px 45px rgba(0,0,0,.5);
+}
+.lightbox-2025__fechar,
+.lightbox-2025__anterior,
+.lightbox-2025__proximo{
+    position:absolute;
+    border:0;
+    color:#fff;
+    background:rgba(255,255,255,.13);
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.lightbox-2025__fechar{
+    top:18px;
+    right:22px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    font-size:30px;
+}
+.lightbox-2025__anterior,
+.lightbox-2025__proximo{
+    top:50%;
+    transform:translateY(-50%);
+    width:52px;
+    height:74px;
+    border-radius:12px;
+    font-size:38px;
+}
+.lightbox-2025__anterior{left:15px;}
+.lightbox-2025__proximo{right:15px;}
+.lightbox-2025__contador{
+    position:absolute;
+    left:50%;
+    bottom:15px;
+    transform:translateX(-50%);
+    color:#fff;
+    font-weight:700;
+    background:rgba(0,0,0,.35);
+    padding:7px 13px;
+    border-radius:999px;
+}
+@media(max-width:700px){
+    .galeria-2025{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+    .lightbox-2025{padding:55px 12px;}
+    .lightbox-2025__imagem{
+        max-width:96vw;
+        max-height:78vh;
+    }
+}
+</style>
+
 </head>
 
 <body>
@@ -104,92 +209,234 @@ por meio da ciência.
 <h3>Credenciamento</h3>
 
 <div class="galeria-2025">
+    <button class="foto-2025" type="button" data-src="../imagens/credenciamento/credenciamento-01.jpg" aria-label="Ampliar Credenciamento da ABCiências 2025">
     <img src="../imagens/credenciamento/credenciamento-01.jpg" alt="Credenciamento da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/credenciamento/credenciamento-02.jpg" aria-label="Ampliar Credenciamento da ABCiências 2025">
     <img src="../imagens/credenciamento/credenciamento-02.jpg" alt="Credenciamento da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/credenciamento/credenciamento-03.jpg" aria-label="Ampliar Credenciamento da ABCiências 2025">
     <img src="../imagens/credenciamento/credenciamento-03.jpg" alt="Credenciamento da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/credenciamento/credenciamento-04.jpg" aria-label="Ampliar Credenciamento da ABCiências 2025">
     <img src="../imagens/credenciamento/credenciamento-04.jpg" alt="Credenciamento da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/credenciamento/credenciamento-05.jpg" aria-label="Ampliar Credenciamento da ABCiências 2025">
     <img src="../imagens/credenciamento/credenciamento-05.jpg" alt="Credenciamento da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/credenciamento/credenciamento-06.jpg" aria-label="Ampliar Credenciamento da ABCiências 2025">
     <img src="../imagens/credenciamento/credenciamento-06.jpg" alt="Credenciamento da ABCiências 2025">
+</button>
 </div>
 
 <h3>Cerimônia de abertura</h3>
 
 <div class="galeria-2025">
+    <button class="foto-2025" type="button" data-src="../imagens/abertura/abertura-01.jpg" aria-label="Ampliar Cerimônia de abertura da ABCiências 2025">
     <img src="../imagens/abertura/abertura-01.jpg" alt="Cerimônia de abertura da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/abertura/abertura-02.jpg" aria-label="Ampliar Cerimônia de abertura da ABCiências 2025">
     <img src="../imagens/abertura/abertura-02.jpg" alt="Cerimônia de abertura da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/abertura/abertura-03.jpg" aria-label="Ampliar Cerimônia de abertura da ABCiências 2025">
     <img src="../imagens/abertura/abertura-03.jpg" alt="Cerimônia de abertura da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/abertura/abertura-04.jpg" aria-label="Ampliar Cerimônia de abertura da ABCiências 2025">
     <img src="../imagens/abertura/abertura-04.jpg" alt="Cerimônia de abertura da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/abertura/abertura-05.jpg" aria-label="Ampliar Cerimônia de abertura da ABCiências 2025">
     <img src="../imagens/abertura/abertura-05.jpg" alt="Cerimônia de abertura da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/abertura/abertura-06.jpg" aria-label="Ampliar Cerimônia de abertura da ABCiências 2025">
     <img src="../imagens/abertura/abertura-06.jpg" alt="Cerimônia de abertura da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/abertura/abertura-07.jpg" aria-label="Ampliar Cerimônia de abertura da ABCiências 2025">
     <img src="../imagens/abertura/abertura-07.jpg" alt="Cerimônia de abertura da ABCiências 2025">
+</button>
 </div>
 
 <h3>Exposição dos trabalhos</h3>
 
 <div class="galeria-2025">
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-01.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-01.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-02.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-02.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-03.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-03.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-04.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-04.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-05.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-05.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-06.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-06.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-07.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-07.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-08.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-08.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-09.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-09.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-10.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-10.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-11.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-11.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-12.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-12.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-13.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-13.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-14.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-14.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-15.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-15.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-16.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-16.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/exposicao/exposicao-17.jpg" aria-label="Ampliar Exposição dos trabalhos da ABCiências 2025">
     <img src="../imagens/exposicao/exposicao-17.jpg" alt="Exposição dos trabalhos da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-03.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-03.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-04.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-04.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
 </div>
 
 <h3>Cerimônia de premiação</h3>
 
 <div class="galeria-2025">
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-01.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-01.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-02.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-02.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-05.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-05.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-06.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-06.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-07.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-07.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-08.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-08.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-09.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-09.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-10.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-10.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-11.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-11.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-12.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-12.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-13.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-13.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-14.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-14.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-15.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-15.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-16.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-16.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-17.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-17.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-18.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-18.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-19.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-19.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-20.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-20.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-21.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-21.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-22.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-22.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-23.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-23.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-24.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-24.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-25.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-25.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-26.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-26.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-27.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-27.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-28.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-28.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-29.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-29.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-30.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-30.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-31.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-31.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-32.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-32.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-33.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-33.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-34.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-34.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-35.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-35.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-36.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-36.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-37.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-37.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-38.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-38.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-39.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-39.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-40.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-40.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
+    <button class="foto-2025" type="button" data-src="../imagens/premiacao/premiacao-41.jpg" aria-label="Ampliar Cerimônia de premiação da ABCiências 2025">
     <img src="../imagens/premiacao/premiacao-41.jpg" alt="Cerimônia de premiação da ABCiências 2025">
+</button>
 </div>
 
 </div>
@@ -199,6 +446,15 @@ por meio da ciência.
 </section>
 
 </main>
+
+
+<div class="lightbox-2025" id="lightbox2025" role="dialog" aria-modal="true" aria-label="Visualizador de fotografias da edição 2025">
+    <button class="lightbox-2025__fechar" id="lightbox2025Fechar" type="button" aria-label="Fechar">×</button>
+    <button class="lightbox-2025__anterior" id="lightbox2025Anterior" type="button" aria-label="Foto anterior">‹</button>
+    <img class="lightbox-2025__imagem" id="lightbox2025Imagem" src="" alt="Fotografia ampliada">
+    <button class="lightbox-2025__proximo" id="lightbox2025Proximo" type="button" aria-label="Próxima foto">›</button>
+    <div class="lightbox-2025__contador" id="lightbox2025Contador"></div>
+</div>
 
 <footer class="rodape">
 
@@ -237,6 +493,62 @@ abciencias2025@gmail.com
 </footer>
 
 <script src="../js/script.js"></script>
+
+
+<script>
+(function(){
+    const botoes = Array.from(document.querySelectorAll('.foto-2025'));
+    const lightbox = document.getElementById('lightbox2025');
+    const imagem = document.getElementById('lightbox2025Imagem');
+    const contador = document.getElementById('lightbox2025Contador');
+    const fechar = document.getElementById('lightbox2025Fechar');
+    const anterior = document.getElementById('lightbox2025Anterior');
+    const proximo = document.getElementById('lightbox2025Proximo');
+
+    let atual = 0;
+
+    function mostrar(indice){
+        if(!botoes.length) return;
+        atual = (indice + botoes.length) % botoes.length;
+        const botao = botoes[atual];
+        const img = botao.querySelector('img');
+        imagem.src = botao.dataset.src;
+        imagem.alt = img ? img.alt : 'Fotografia ampliada';
+        contador.textContent = (atual + 1) + ' / ' + botoes.length;
+    }
+
+    function abrir(indice){
+        mostrar(indice);
+        lightbox.classList.add('aberto');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function fecharLightbox(){
+        lightbox.classList.remove('aberto');
+        document.body.style.overflow = '';
+        imagem.src = '';
+    }
+
+    botoes.forEach((botao, indice) => {
+        botao.addEventListener('click', () => abrir(indice));
+    });
+
+    fechar.addEventListener('click', fecharLightbox);
+    anterior.addEventListener('click', () => mostrar(atual - 1));
+    proximo.addEventListener('click', () => mostrar(atual + 1));
+
+    lightbox.addEventListener('click', (event) => {
+        if(event.target === lightbox) fecharLightbox();
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if(!lightbox.classList.contains('aberto')) return;
+        if(event.key === 'Escape') fecharLightbox();
+        if(event.key === 'ArrowLeft') mostrar(atual - 1);
+        if(event.key === 'ArrowRight') mostrar(atual + 1);
+    });
+})();
+</script>
 
 </body>
 
